@@ -34,7 +34,7 @@
     } catch (err) {
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
-      alert("Something went wrong. Please email hello@shotsbykissu.com directly.");
+      alert("Something went wrong. Please email hello@shotbykissu.com directly.");
     }
   });
 })();

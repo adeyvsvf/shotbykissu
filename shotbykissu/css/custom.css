@@ -1,11 +1,15 @@
-/* SHOTSBYKISSU — custom CSS for things Tailwind can't do inline */
+/* SHOTBYKISSU — custom CSS for things Tailwind can't do inline */
 
 /* ---------- Preloader letter reveal ---------- */
+#preloader-text {
+  line-height: 1;
+  text-shadow: 0 0 30px rgba(255, 45, 123, 0.4);
+}
 #preloader-text span {
   display: inline-block;
   opacity: 0;
   transform: translateY(20px);
-  animation: letterIn 0.08s forwards;
+  animation: letterIn 0.35s forwards;
 }
 #preloader-text span:nth-child(1)  { animation-delay: 0.00s; }
 #preloader-text span:nth-child(2)  { animation-delay: 0.08s; }
@@ -18,7 +22,6 @@
 #preloader-text span:nth-child(9)  { animation-delay: 0.64s; }
 #preloader-text span:nth-child(10) { animation-delay: 0.72s; }
 #preloader-text span:nth-child(11) { animation-delay: 0.80s; }
-#preloader-text span:nth-child(12) { animation-delay: 0.88s; }
 
 @keyframes letterIn {
   to { opacity: 1; transform: translateY(0); }

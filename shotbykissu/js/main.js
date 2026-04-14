@@ -11,20 +11,14 @@
   // ---------- Preloader ----------
   const preloader = document.getElementById('preloader');
   if (preloader) {
-    const seen = sessionStorage.getItem('sbk_preloader_seen');
-    if (seen) {
-      preloader.remove();
-    } else {
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          preloader.classList.add('fade-out');
-          setTimeout(() => {
-            preloader.remove();
-            sessionStorage.setItem('sbk_preloader_seen', '1');
-          }, 600);
-        }, 1800);
-      });
-    }
+    const start = () => {
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+        setTimeout(() => preloader.remove(), 600);
+      }, 2200);
+    };
+    if (document.readyState === 'complete') start();
+    else window.addEventListener('load', start);
   }
 
   // ---------- Nav scroll + hero clip-path ----------

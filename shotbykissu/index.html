@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SHOTSBYKISSU — Atlanta's creative wedding and event videographer. Every love story deserves a highlight reel." />
-  <meta property="og:title" content="SHOTSBYKISSU — Wedding & Event Videographer, Atlanta" />
+  <meta name="description" content="SHOTBYKISSU — Atlanta's creative wedding and event videographer. Every love story deserves a highlight reel." />
+  <meta property="og:title" content="SHOTBYKISSU — Wedding & Event Videographer, Atlanta" />
   <meta property="og:description" content="Your moments. My vision. Cinematic wedding films and event content." />
   <meta property="og:type" content="website" />
 
-  <title>SHOTSBYKISSU — Wedding & Event Videographer | Atlanta, GA</title>
+  <title>SHOTBYKISSU — Wedding & Event Videographer | Atlanta, GA</title>
 
   <link rel="icon" href="favicon.ico" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,6 +37,7 @@
           fontFamily: {
             display: ['"Playfair Display"', 'serif'],
             script:  ['"Dancing Script"', 'cursive'],
+            elegant: ['"Great Vibes"', 'cursive'],
             body:    ['Poppins', 'sans-serif'],
           },
         },
@@ -63,7 +64,7 @@
   <!-- ====================================================== -->
   <div id="preloader" class="fixed inset-0 z-[9999] bg-dark flex items-center justify-center">
     <h1 id="preloader-text" class="font-script text-pink-hot text-6xl md:text-8xl">
-      <span>S</span><span>H</span><span>O</span><span>T</span><span>S</span><span>B</span><span>Y</span><span>K</span><span>I</span><span>S</span><span>S</span><span>U</span>
+      <span>S</span><span>H</span><span>O</span><span>T</span><span>B</span><span>Y</span><span>K</span><span>I</span><span>S</span><span>S</span><span>U</span>
     </h1>
   </div>
 
@@ -73,7 +74,7 @@
   <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
       <a href="#" class="flex items-baseline gap-2">
-        <span class="nav-logo-shots font-body uppercase tracking-widest text-white text-sm font-light transition-colors">SHOTS BY</span>
+        <span class="nav-logo-shots font-body uppercase tracking-widest text-white text-sm font-light transition-colors">SHOT BY</span>
         <span class="font-script text-pink-hot text-3xl leading-none">Kissu</span>
       </a>
 
@@ -118,19 +119,18 @@
       <video
         id="hero-video"
         class="absolute inset-0 w-full h-full object-cover"
-        autoplay muted loop playsinline
-        poster="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80">
-        <source src="https://cdn.coverr.co/videos/coverr-a-bride-and-groom-cutting-their-wedding-cake-2633/1080p.mp4" type="video/mp4" />
+        autoplay muted loop playsinline>
+        <source src="assets/video/wedding.mp4" type="video/mp4" />
       </video>
       <div class="absolute inset-0 bg-black/40"></div>
     </div>
 
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
       <p class="font-body uppercase text-xs md:text-sm tracking-[0.3em] text-white/90 mb-6" data-aos="fade-up">
-        Atlanta's Creative Wedding Videographer
+        Creative Videographer / Content Creator
       </p>
-      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl text-white leading-tight max-w-4xl" data-aos="fade-up" data-aos-delay="200">
-        Every love story<br />deserves a highlight reel
+      <h1 class="font-elegant text-white text-7xl md:text-9xl leading-[1.1] max-w-5xl" data-aos="fade-up" data-aos-delay="200">
+        Every event<br />deserves a highlight reel
       </h1>
       <p class="font-script text-pink-hot text-3xl md:text-5xl mt-6 -rotate-3" data-aos="fade-up" data-aos-delay="400">
         ~ Kissu ~
@@ -150,27 +150,21 @@
   <!-- 4. ABOUT                                               -->
   <!-- ====================================================== -->
   <section id="about" class="py-24 md:py-32 px-6">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
-      <div class="md:col-span-3 relative" data-aos="fade-right">
-        <div class="absolute -z-10 bg-pink-soft rounded-full blur-3xl opacity-40 w-96 h-96 -top-10 -left-10"></div>
-        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=900&q=80"
-             alt="Kissu — videographer portrait"
-             class="w-full rounded-3xl shadow-xl object-cover aspect-[4/5]" />
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div class="flex justify-center md:justify-end" data-aos="fade-right">
+        <div class="relative w-[340px] h-[340px] md:w-[460px] md:h-[460px] lg:w-[520px] lg:h-[520px]">
+          <div class="absolute -inset-4 bg-pink-soft rounded-full blur-2xl opacity-40"></div>
+          <img src="assets/img/circleKissuImage.png"
+               alt="Kissu — videographer portrait"
+               class="relative w-full h-full object-contain" />
+        </div>
       </div>
-      <div class="md:col-span-2" data-aos="fade-left">
-        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">Nice to meet you</p>
-        <h2 class="font-display text-4xl md:text-5xl text-dark mb-6">I'm Kissu</h2>
-        <p class="font-body text-warmgray leading-relaxed mb-5">
-          I'm an Atlanta-based wedding and event videographer obsessed with the in-between moments — the teary laugh during vows, the first dance spin, the quiet glance across the reception hall.
-        </p>
-        <p class="font-body text-warmgray leading-relaxed mb-5">
-          My goal isn't just to document your day. It's to hand you a film that feels exactly the way it felt to live it — romantic, a little chaotic, and unforgettable.
-        </p>
-        <p class="font-body text-warmgray leading-relaxed mb-8">
-          Born and raised in the ATL, shooting love stories anywhere the plane goes.
-        </p>
-        <p class="font-script text-pink-hot text-2xl leading-snug">
-          "I don't just record events — I turn them into films you'll rewatch forever."
+      <div data-aos="fade-left">
+        <h2 class="font-display uppercase text-4xl md:text-5xl lg:text-6xl text-dark mb-8 leading-tight tracking-wide">
+          About<br />Shot By Kissu
+        </h2>
+        <p class="font-body text-warmgray leading-relaxed text-base md:text-lg">
+          Shot By Kissu is a premier wedding and events content creation service dedicated to capturing the magic and emotion of life's most cherished moments. Specializing in both photography and videography, which transform special events into timeless memories with a blend of artistry, professionalism, and personalized attention.
         </p>
       </div>
     </div>
@@ -429,7 +423,7 @@
   <!-- ====================================================== -->
   <section id="reels" class="py-24 px-6 text-center">
     <div class="max-w-7xl mx-auto">
-      <h2 class="font-script text-pink-hot text-4xl md:text-5xl mb-2" data-aos="fade-up">@shotsbykissu</h2>
+      <h2 class="font-script text-pink-hot text-4xl md:text-5xl mb-2" data-aos="fade-up">@shotbykissu</h2>
       <p class="font-body text-warmgray text-sm mb-1" data-aos="fade-up" data-aos-delay="100">Follow along for behind-the-scenes</p>
       <p class="font-body text-warmgray text-xs mb-12" data-aos="fade-up" data-aos-delay="200">Wedding reels, BTS, and love stories</p>
 
@@ -530,7 +524,7 @@
       <div class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl" data-aos="fade-left">
         <form id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
           <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
-          <input type="hidden" name="_subject" value="New Booking Inquiry - SHOTSBYKISSU" />
+          <input type="hidden" name="_subject" value="New Booking Inquiry - SHOTBYKISSU" />
 
           <div>
             <label class="font-body text-sm text-dark font-medium mb-1 block">Your Name *</label>
@@ -704,11 +698,11 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
       <div>
         <div class="flex items-baseline gap-2 mb-4">
-          <span class="font-body uppercase tracking-widest text-sm font-light">SHOTS BY</span>
+          <span class="font-body uppercase tracking-widest text-sm font-light">SHOT BY</span>
           <span class="font-script text-pink-hot text-3xl leading-none">Kissu</span>
         </div>
         <p class="font-script text-pink-soft text-lg mb-4">Your moments. My vision.</p>
-        <p class="font-body text-sm text-gray-400">hello@shotsbykissu.com</p>
+        <p class="font-body text-sm text-gray-400">hello@shotbykissu.com</p>
         <p class="font-body text-sm text-gray-400">Atlanta, GA</p>
       </div>
 
@@ -735,7 +729,7 @@
     </div>
 
     <div class="max-w-6xl mx-auto border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-2">
-      <p class="font-body text-xs text-gray-500">© <span id="year">2026</span> SHOTSBYKISSU. All rights reserved.</p>
+      <p class="font-body text-xs text-gray-500">© <span id="year">2026</span> SHOTBYKISSU. All rights reserved.</p>
       <p class="font-script text-pink-hot text-sm">Designed with love in ATL</p>
     </div>
   </footer>
