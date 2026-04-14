@@ -1,0 +1,934 @@
+================================================================================
+                        SHOTSBYKISSU - WEBSITE PLAN
+          Wedding & Event Content Creator / Videographer - Atlanta, GA
+================================================================================
+
+
+================================================================================
+  BRAND IDENTITY
+================================================================================
+
+  Name:         SHOTSBYKISSU
+  Tagline:      "Your moments. My vision."
+  Location:     Atlanta, GA
+  Services:     Wedding videography, event content creation, highlight reels
+  Vibe:         Playful, bold, feminine, creative, premium but approachable
+
+  PRIMARY PALETTE:
+  -----------------------------------------------------------------------
+  Hot Pink (Primary)        #FF2D7B   — buttons, accents, highlights
+  Soft Pink (Secondary)     #FFB6D5   — subtle backgrounds, hover glows
+  Blush (Tertiary)          #FFF0F5   — section backgrounds, cards
+  Deep Black                #1A1A1A   — primary text, contrast sections
+  Off-White                 #FAFAFA   — main background
+  White                     #FFFFFF   — cards, overlays
+  Warm Gray                 #8C8C8C   — secondary text, captions
+
+  TYPOGRAPHY:
+  -----------------------------------------------------------------------
+  Heading / Display Font:   "Playfair Display" (serif, elegant, editorial)
+                            — used for hero text, section titles, quotes
+  Playful Accent Font:      "Dancing Script" or "Pacifico" (cursive/script)
+                            — used for the "Kissu" in logo, tagline accents,
+                              decorative elements
+  Body Font:                "Poppins" (sans-serif, modern, clean)
+                            — used for paragraphs, navigation, buttons, labels
+  All from Google Fonts (free).
+
+
+================================================================================
+  TECH STACK
+================================================================================
+
+  - HTML5 + Tailwind CSS (via CDN or PostCSS build)
+  - Vanilla JavaScript (no frameworks)
+  - Google Fonts (Playfair Display, Dancing Script, Poppins)
+  - Swiper.js (testimonial carousel)
+  - GLightbox (portfolio video lightbox)
+  - AOS.js (scroll animations) — or custom IntersectionObserver
+  - Formspree (free tier — contact/booking form backend, no server needed)
+  - Hosting: Netlify or Vercel (free tier)
+
+  PLACEHOLDER ASSETS:
+  -----------------------------------------------------------------------
+  Until real content is provided, use free stock images and videos from:
+  - Images: https://unsplash.com (search: wedding, bride, event, Atlanta)
+  - Images: https://pexels.com (search: wedding videographer, celebration)
+  - Videos: https://pexels.com/videos (search: wedding, ceremony, party)
+  - Videos: https://pixabay.com/videos (search: wedding highlights)
+  Download and place in assets/ folders. Replace with real content later.
+
+  TAILWIND CONFIGURATION:
+  -----------------------------------------------------------------------
+  Extend the default Tailwind theme with custom values:
+
+  colors: {
+    pink: {
+      hot:    '#FF2D7B',
+      soft:   '#FFB6D5',
+      blush:  '#FFF0F5',
+    },
+    dark:     '#1A1A1A',
+    offwhite: '#FAFAFA',
+    warmgray: '#8C8C8C',
+  }
+  fontFamily: {
+    display:  ['Playfair Display', 'serif'],
+    script:   ['Dancing Script', 'cursive'],
+    body:     ['Poppins', 'sans-serif'],
+  }
+
+  Using Tailwind CDN with inline config for simplicity, or a minimal
+  tailwind.config.js if using a build step.
+
+
+================================================================================
+  SITE MAP & SECTION BREAKDOWN
+================================================================================
+
+  PAGE: Single-page scrolling website (with anchor navigation)
+  Sections (in scroll order):
+
+  1.  Preloader / Intro Animation
+  2.  Navigation Bar
+  3.  Hero (Full-Screen Video)
+  4.  About / Intro
+  5.  Services
+  6.  Portfolio / Work Showcase
+  7.  The Process (How It Works)
+  8.  Testimonials
+  9.  Reels / Social Feed (Instagram-style vertical rectangles)
+  10. Call-to-Action / Booking Form (Formspree)
+  11. FAQ
+  12. Footer
+
+
+================================================================================
+  SECTION 1: PRELOADER / INTRO ANIMATION
+================================================================================
+
+  PURPOSE:
+  Sets the tone immediately. A short branded loading animation before the
+  hero video plays.
+
+  DESIGN:
+  - Full-screen overlay, deep black (#1A1A1A) background
+  - "SHOTSBYKISSU" text animates in letter by letter in the playful script
+    font (Dancing Script), colored hot pink (#FF2D7B)
+  - After text completes, it scales up slightly and fades out
+  - Overlay slides up to reveal the hero video beneath
+  - Total duration: 2-2.5 seconds
+  - Only plays on first visit (use sessionStorage to skip on refresh)
+
+  TAILWIND + CUSTOM CSS:
+  - Use Tailwind utilities: fixed inset-0 z-[9999] bg-dark flex
+    items-center justify-center
+  - Custom @keyframes in a <style> block for the letter-by-letter reveal
+  - JS to remove overlay from DOM after animation completes
+
+  PLACEHOLDER: None needed — this is pure text animation.
+
+
+================================================================================
+  SECTION 2: NAVIGATION BAR
+================================================================================
+
+  PURPOSE:
+  Persistent navigation that stays with the user as they scroll.
+
+  DESIGN:
+  - Fixed/sticky at top of viewport
+  - Transparent background initially (over hero video), transitions to
+    solid white with subtle shadow on scroll
+  - Left: "SHOTSBYKISSU" logo — "SHOTS BY" in Poppins (uppercase, light
+    weight), "Kissu" in Dancing Script (hot pink)
+  - Right: nav links in Poppins uppercase (12-14px, letter-spacing: 2px)
+    Links: WORK | ABOUT | SERVICES | PROCESS | CONTACT
+  - Far right: "BOOK NOW" pill button — hot pink bg, white text
+  - Mobile: hamburger icon (animated three-line to X transform)
+    Opens full-screen overlay menu with large centered links and social
+    icons at bottom
+  - Hover state: links get a hot pink underline that slides in from left
+
+  TAILWIND CLASSES:
+  - Nav: fixed top-0 w-full z-50 transition-all duration-300
+  - Transparent: bg-transparent
+  - Scrolled (JS toggle): bg-white shadow-md
+  - Logo "SHOTS BY": font-body uppercase tracking-widest text-white
+    (-> text-dark on scroll)
+  - Logo "Kissu": font-script text-pink-hot text-2xl
+  - Links: font-body uppercase text-xs tracking-[0.15em]
+    hover:text-pink-hot transition-colors
+  - Book Now: bg-pink-hot text-white font-body uppercase text-xs
+    tracking-wider px-6 py-2 rounded-full hover:bg-pink-600
+  - Mobile overlay: fixed inset-0 bg-dark/95 flex flex-col
+    items-center justify-center gap-8
+
+  PLACEHOLDER: None needed — text-based.
+
+
+================================================================================
+  SECTION 3: HERO (FULL-SCREEN VIDEO)
+================================================================================
+
+  PURPOSE:
+  Immediate emotional impact. The visitor should FEEL the energy of a
+  wedding/event before reading a single word.
+
+  DESIGN:
+  - Full viewport height and width (h-screen w-full)
+  - Background video: showreel/highlight montage of best wedding & event
+    footage (autoplay, muted, loop)
+  - Dark gradient overlay on top of video (black at 40% opacity)
+  - Centered content overlay:
+
+      [small Poppins uppercase, letter-spaced, white]
+      ATLANTA'S CREATIVE WEDDING VIDEOGRAPHER
+
+      [large Playfair Display, white, hero headline]
+      "Every love story
+       deserves a highlight reel"
+
+      [Dancing Script, hot pink, angled slightly]
+      ~ Kissu ~
+
+      [Poppins, pill button, hot pink bg, white text]
+      [ VIEW MY WORK ]     [ BOOK YOUR DATE ]
+
+  - Subtle scroll-down indicator at bottom: animated bouncing chevron
+
+  CREATIVE TWIST (differentiator from capturedbychinny):
+  - Video plays in a custom shape — a large rounded blob/organic shape
+    in the center of the screen (using CSS clip-path) instead of plain
+    full-screen rectangle. The surrounding area is solid blush pink.
+    On scroll, the clip-path animates to expand to full-screen.
+
+  TAILWIND CLASSES:
+  - Section: relative h-screen w-full overflow-hidden
+  - Video: absolute inset-0 w-full h-full object-cover
+  - Overlay: absolute inset-0 bg-black/40
+  - Content: relative z-10 flex flex-col items-center justify-center
+    h-full text-center px-4
+  - Subtitle: font-body uppercase text-sm tracking-[0.2em] text-white/80
+  - Headline: font-display text-5xl md:text-7xl text-white leading-tight
+  - Script: font-script text-pink-hot text-3xl -rotate-3
+  - Buttons: inline-flex gap-4 mt-8
+  - Scroll indicator: absolute bottom-8 animate-bounce
+
+  PLACEHOLDER:
+  - Download a free wedding highlight video from Pexels:
+    Search "wedding cinematic" or "wedding highlights" on pexels.com/videos
+    Download in 1920x1080. Save as assets/video/hero-reel.mp4
+  - Capture a still frame for poster: assets/img/hero-poster.jpg
+
+
+================================================================================
+  SECTION 4: ABOUT / INTRO
+================================================================================
+
+  PURPOSE:
+  Put a face and personality behind the brand. Build connection.
+
+  DESIGN:
+  - Two-column layout (60/40 split)
+  - Left column: professional photo of Kissu — candid, camera in hand.
+    Decorative pink blob shape behind it (echoing hero motif)
+  - Right column:
+      [Poppins uppercase, small, hot pink] NICE TO MEET YOU
+      [Playfair Display, large, black] I'm Kissu
+      [Poppins, regular, warm gray, relaxed leading]
+      2-3 paragraphs — personality, passion for storytelling, Atlanta
+      roots. Warm, first-person, conversational.
+      [Dancing Script, hot pink]
+      "I don't just record events — I turn them into films you'll
+       rewatch forever."
+
+  - Fade-in-up on scroll
+  - Mobile: stacks vertically, image on top
+
+  TAILWIND CLASSES:
+  - Section: py-24 md:py-32 px-6 max-w-6xl mx-auto
+  - Grid: grid grid-cols-1 md:grid-cols-5 gap-12 items-center
+  - Image col: md:col-span-3 relative
+  - Blob: absolute -z-10 bg-pink-soft rounded-full blur-3xl
+    opacity-30 w-96 h-96 -top-10 -left-10
+  - Text col: md:col-span-2
+  - Subtitle: font-body uppercase text-sm tracking-[0.2em]
+    text-pink-hot mb-3
+  - Heading: font-display text-4xl md:text-5xl text-dark mb-6
+  - Body: font-body text-warmgray leading-relaxed mb-6
+  - Quote: font-script text-pink-hot text-xl
+
+  PLACEHOLDER:
+  - Download a portrait of a female photographer from Unsplash:
+    Search "black woman photographer" or "woman with camera wedding"
+    Save as assets/img/about-kissu.webp
+
+
+================================================================================
+  SECTION 5: SERVICES
+================================================================================
+
+  PURPOSE:
+  Clearly communicate what Kissu offers.
+
+  DESIGN:
+  - Background: blush (#FFF0F5)
+  - Header centered:
+      [Poppins uppercase, small, hot pink] WHAT I DO
+      [Playfair Display, large, black] Services
+
+  - Three cards in a row (stack on mobile):
+
+    CARD 1: WEDDING FILMS
+    - Line icon (film camera), hot pink
+    - Title: Playfair Display
+    - Description: Poppins, gray
+    - "LEARN MORE" outlined pill button
+
+    CARD 2: EVENT CONTENT
+    (corporate events, birthdays, galas — social-ready edits)
+
+    CARD 3: CONTENT CREATION
+    (brand videos, social reels, BTS packages)
+
+  - Card: white bg, rounded-2xl, shadow-sm
+  - Hover: -translate-y-2, shadow-lg, border-t-4 border-pink-hot
+
+  TAILWIND CLASSES:
+  - Section: bg-pink-blush py-24 px-6
+  - Grid: max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8
+  - Card: bg-white rounded-2xl p-8 text-center shadow-sm
+    hover:-translate-y-2 hover:shadow-lg hover:border-t-4
+    hover:border-pink-hot transition-all duration-300
+  - Icon: w-12 h-12 mx-auto text-pink-hot mb-4
+  - Title: font-display text-2xl text-dark mb-3
+  - Desc: font-body text-warmgray text-sm leading-relaxed mb-6
+  - Button: border-2 border-pink-hot text-pink-hot font-body uppercase
+    text-xs tracking-wider px-6 py-2 rounded-full
+    hover:bg-pink-hot hover:text-white transition-all
+
+  PLACEHOLDER: None needed — icons + text only.
+
+
+================================================================================
+  SECTION 6: PORTFOLIO / WORK SHOWCASE
+================================================================================
+
+  PURPOSE:
+  Show, don't tell. Let the work sell itself.
+
+  DESIGN:
+  - Header:
+      [Poppins uppercase, small, hot pink] PORTFOLIO
+      [Playfair Display, large, black] Recent Work
+
+  - Filter tabs (optional):
+    ALL | WEDDINGS | EVENTS | CONTENT
+    Active: hot pink underline + bold
+
+  - Masonry-style grid of portfolio thumbnails:
+    - Mix of large (span 2 cols) and standard (1 col)
+    - Hover: dark overlay + play icon + project title + "Watch Film"
+    - Click: opens video in GLightbox modal
+
+  - Bottom: "VIEW ALL WORK" centered pill button
+
+  TAILWIND CLASSES:
+  - Section: py-24 px-6 max-w-7xl mx-auto
+  - Tabs: flex justify-center gap-6 mb-12 font-body uppercase text-sm
+    tracking-wider
+  - Active tab: text-pink-hot border-b-2 border-pink-hot font-semibold
+  - Grid: grid grid-cols-2 md:grid-cols-4 gap-4
+  - Featured: md:col-span-2 md:row-span-2
+  - Item: relative group rounded-xl overflow-hidden cursor-pointer
+  - Image: w-full h-full object-cover
+  - Overlay: absolute inset-0 bg-black/60 opacity-0
+    group-hover:opacity-100 transition-opacity duration-300 flex
+    flex-col items-center justify-center
+  - Play icon: w-16 h-16 text-white mb-2
+  - Title: font-display text-white text-lg
+
+  PLACEHOLDER:
+  - Download 8-12 wedding/event photos from Unsplash or Pexels:
+    Search: "wedding ceremony", "wedding reception", "birthday party",
+    "wedding couple portrait", "event photographer", "first dance"
+    Save as assets/img/portfolio/portfolio-01.webp through portfolio-12.webp
+    Mix of landscape and portrait orientations.
+  - For video lightbox placeholders, use free Pexels wedding videos or
+    embed placeholder YouTube/Vimeo wedding highlight reels.
+
+
+================================================================================
+  SECTION 7: THE PROCESS (HOW IT WORKS)
+================================================================================
+
+  PURPOSE:
+  Remove friction. Show potential clients exactly what to expect.
+
+  DESIGN:
+  - Background: white
+  - Header:
+      [Poppins uppercase, small, hot pink] HOW IT WORKS
+      [Playfair Display, large, black] The Process
+
+  - Horizontal timeline, 4 steps (vertical on mobile):
+
+    01                  02                  03                  04
+    *-------------------*-------------------*-------------------*
+    INQUIRE             PLAN                CREATE              DELIVER
+
+    Step 1: INQUIRE
+    "Fill out the contact form or DM me. Tell me about your vision,
+     date, and vibe."
+
+    Step 2: PLAN
+    "We hop on a call, plan the shot list, scout locations, and lock
+     in the details."
+
+    Step 3: CREATE
+    "I show up, blend in, and capture every genuine moment — no stiff
+     poses, just real magic."
+
+    Step 4: DELIVER
+    "Your cinematic film is edited, color-graded, and delivered within
+     4-6 weeks."
+
+  - Step numbers: large font-display in pink-soft/30 behind title
+  - Connecting line: thin hot pink, animated fill on scroll
+  - Playful line icons above each step
+
+  TAILWIND CLASSES:
+  - Section: py-24 px-6 max-w-6xl mx-auto
+  - Container: flex flex-col md:flex-row justify-between items-start
+    gap-12 relative
+  - Line (desktop): absolute top-8 left-0 right-0 h-0.5 bg-pink-soft
+  - Step: flex-1 text-center relative
+  - Watermark number: font-display text-7xl text-pink-soft/30
+    absolute -top-6
+  - Title: font-body uppercase text-sm tracking-wider font-semibold
+    text-dark mb-2
+  - Desc: font-body text-warmgray text-sm leading-relaxed
+
+  PLACEHOLDER: None needed — icons + text only.
+
+
+================================================================================
+  SECTION 8: TESTIMONIALS
+================================================================================
+
+  PURPOSE:
+  Social proof. Let happy clients sell the service.
+
+  DESIGN:
+  - Background: blush (#FFF0F5)
+  - Header:
+      [Poppins uppercase, small, hot pink] KIND WORDS
+      [Playfair Display, large, black] What Clients Say
+
+  - Swiper.js carousel, 3-5 testimonials per slide:
+    - 5 hot pink stars
+    - Quote: Playfair Display italic, 20-22px
+    - Client name: Poppins bold
+    - Location/date: Poppins gray small
+    - Large decorative " behind text in pink-soft/20
+
+  - Dot navigation (active = hot pink)
+  - Auto-advance 5 seconds, pause on hover
+
+  TAILWIND CLASSES:
+  - Section: bg-pink-blush py-24 px-6
+  - Slide: max-w-3xl mx-auto text-center
+  - Stars: flex justify-center gap-1 text-pink-hot mb-6
+  - Quote: font-display italic text-xl md:text-2xl text-dark
+    leading-relaxed mb-8
+  - Decorative mark: absolute -top-4 left-1/2 -translate-x-1/2
+    font-display text-[120px] text-pink-soft/20 pointer-events-none
+  - Name: font-body font-semibold text-dark
+  - Detail: font-body text-warmgray text-sm
+
+  PLACEHOLDER:
+  - Use realistic-sounding placeholder testimonial text:
+    "Kissu captured our wedding day better than we could have ever
+     imagined..." etc.
+    Names: "Aisha & Marcus", "Taylor & Jordan", "Brianna & DeAndre"
+
+
+================================================================================
+  SECTION 9: REELS / SOCIAL FEED
+================================================================================
+
+  PURPOSE:
+  Showcase Instagram Reels and short-form video content in a visually
+  striking layout that mirrors the Instagram Reels format. Drive
+  followers and demonstrate social media content creation skills.
+
+  DESIGN:
+  - Background: white
+  - Header:
+      [Dancing Script, hot pink, text-4xl] @shotsbykissu
+      [Poppins, warmgray, text-sm] Follow along for behind-the-scenes
+      [Poppins, warmgray, text-xs] Wedding reels, BTS, and love stories
+
+  - LAYOUT: Horizontal row of 4-5 tall RECTANGLES (9:16 aspect ratio,
+    matching Instagram Reels / TikTok format)
+    Desktop: 5 reels in a row
+    Tablet: 3 reels
+    Mobile: 2 reels (horizontally scrollable)
+
+  - Each reel card:
+    ┌──────────┐
+    │          │  Aspect ratio: 9:16 (tall rectangle)
+    │          │  Rounded corners (rounded-2xl)
+    │  VIDEO/  │  Background: thumbnail image from the reel
+    │  IMAGE   │
+    │          │  Bottom-left overlay (gradient from transparent to
+    │          │  black/70 at bottom):
+    │          │    [play icon]
+    │          │    "Getting Ready Moments"  <- title, white, small
+    │ ▶ 24.5K │    "24.5K views" <- view count, white/70, tiny
+    └──────────┘
+
+  - Hover effect:
+    - Image scales up slightly (scale-105)
+    - Play button pulses / grows
+    - Subtle pink glow border (ring-2 ring-pink-hot/50)
+    - Click opens the reel video in a lightbox OR links to Instagram
+
+  - Below the reels grid:
+    "FOLLOW ON INSTAGRAM" pill button (outlined, pink border)
+    Next to it: "WATCH ON TIKTOK" pill button (outlined, pink border)
+
+  TAILWIND CLASSES:
+  - Section: py-24 px-6 max-w-7xl mx-auto text-center
+  - Handle: font-script text-pink-hot text-4xl mb-2
+  - Subtitle: font-body text-warmgray text-sm mb-1
+  - Sub-subtitle: font-body text-warmgray text-xs mb-12
+  - Reels container: flex gap-4 justify-center overflow-x-auto
+    md:overflow-visible pb-4 snap-x snap-mandatory md:snap-none
+    scrollbar-hide
+  - Each reel card: relative flex-shrink-0 w-[200px] md:w-[220px]
+    lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group
+    cursor-pointer snap-center
+  - Thumbnail image: absolute inset-0 w-full h-full object-cover
+    group-hover:scale-105 transition-transform duration-500
+  - Bottom gradient: absolute bottom-0 left-0 right-0 h-1/3
+    bg-gradient-to-t from-black/70 to-transparent
+  - Play icon: absolute top-1/2 left-1/2 -translate-x-1/2
+    -translate-y-1/2 w-12 h-12 text-white/80
+    group-hover:text-white group-hover:scale-110 transition-all
+  - Title overlay: absolute bottom-4 left-3 right-3 text-left
+  - Reel title: font-body text-white text-xs font-medium leading-tight
+  - View count: font-body text-white/60 text-[10px] mt-1
+    flex items-center gap-1
+  - Hover glow: group-hover:ring-2 group-hover:ring-pink-hot/50
+    transition-all
+  - CTA buttons row: flex justify-center gap-4 mt-10
+  - Button: border-2 border-pink-hot text-pink-hot font-body uppercase
+    text-xs tracking-wider px-6 py-3 rounded-full
+    hover:bg-pink-hot hover:text-white transition-all
+
+  MOBILE SCROLL BEHAVIOR:
+  - On mobile, the reels container is horizontally scrollable
+  - snap-x snap-mandatory for snappy reel-by-reel scrolling
+  - Hide scrollbar with scrollbar-hide (Tailwind plugin or custom CSS:
+    .scrollbar-hide::-webkit-scrollbar { display: none; })
+  - Optional: add small dot indicators below for current scroll position
+
+  PLACEHOLDER:
+  - Download 5 vertical/portrait images from Unsplash or Pexels:
+    Search: "wedding behind the scenes", "bride getting ready",
+    "wedding dance", "couple portrait vertical", "event party"
+    IMPORTANT: Choose portrait-orientation images (taller than wide)
+    to match the 9:16 reel format.
+    Save as assets/img/reels/reel-01.webp through reel-05.webp
+  - For placeholder videos (if using video thumbnails with hover-play):
+    Download short vertical clips from Pexels Videos:
+    Search: "wedding vertical", "celebration vertical"
+    Save as assets/video/reels/reel-01.mp4 etc.
+  - Placeholder reel titles:
+    1. "Getting Ready Moments"     — 24.5K views
+    2. "First Look Reaction"       — 18.2K views
+    3. "The Vows That Made Us Cry" — 31.7K views
+    4. "Reception Dance Off"       — 42.1K views
+    5. "Golden Hour Portraits"     — 15.8K views
+
+
+================================================================================
+  SECTION 10: CALL-TO-ACTION / BOOKING FORM (FORMSPREE)
+================================================================================
+
+  PURPOSE:
+  Convert visitors into inquiries. This is the money section.
+
+  DESIGN:
+  - Full-width section with parallax background image (wedding scene)
+    + dark overlay
+  - Two-part layout:
+
+    LEFT (or top on mobile) — emotional pitch:
+      [Poppins uppercase, small, soft pink] READY TO CREATE SOMETHING
+      BEAUTIFUL?
+      [Playfair Display, 48-60px, white] Let's tell your story
+      [Poppins, regular, white, body] Currently booking for 2026.
+      Limited dates available.
+
+    RIGHT (or bottom on mobile) — the booking form:
+      White card, rounded-2xl, shadow-2xl, generous padding
+
+      FORM FIELDS:
+      ┌────────────────────────────────────────┐
+      │  Your Name *                           │
+      │  [________________________]            │
+      │                                        │
+      │  Email Address *                       │
+      │  [________________________]            │
+      │                                        │
+      │  Phone Number                          │
+      │  [________________________]            │
+      │                                        │
+      │  Event Type *                          │
+      │  [  Wedding  v  ]  (dropdown)          │
+      │   Options: Wedding / Birthday /        │
+      │   Corporate / Content / Other          │
+      │                                        │
+      │  Event Date *                          │
+      │  [________________________]            │
+      │                                        │
+      │  Event Location                        │
+      │  [________________________]            │
+      │                                        │
+      │  Tell me about your vision *           │
+      │  [________________________]            │
+      │  [________________________]            │
+      │  [________________________]            │
+      │                                        │
+      │  How did you hear about me?            │
+      │  [  Instagram  v  ]  (dropdown)        │
+      │   Options: Instagram / TikTok /        │
+      │   Google / Referral / Other            │
+      │                                        │
+      │  [ LET'S CREATE MAGIC ]                │
+      │   (hot pink, full-width pill button)   │
+      └────────────────────────────────────────┘
+
+  FORMSPREE SETUP (FREE):
+  - Action: https://formspree.io/f/{your-form-id}
+  - Method: POST
+  - Free tier: 50 submissions/month, email notifications, spam filter
+  - Honeypot field: <input type="text" name="_gotcha" class="hidden">
+  - Subject field: <input type="hidden" name="_subject"
+    value="New Booking Inquiry - SHOTSBYKISSU">
+  - On success: replace form with "Thank you! I'll be in touch within
+    24 hours" message with checkmark animation
+  - On error: inline error, keep form data
+
+  TAILWIND CLASSES:
+  - Section: relative py-24 px-6 bg-fixed bg-cover bg-center
+  - Overlay: absolute inset-0 bg-black/60
+  - Grid: relative z-10 max-w-6xl mx-auto grid grid-cols-1
+    lg:grid-cols-2 gap-12 items-center
+  - Pitch heading: font-display text-4xl md:text-6xl text-white mb-4
+  - Form card: bg-white rounded-2xl p-8 md:p-10 shadow-2xl
+  - Label: font-body text-sm text-dark font-medium mb-1 block
+  - Input: w-full border border-gray-200 rounded-lg px-4 py-3
+    font-body text-sm focus:outline-none focus:border-pink-hot
+    focus:ring-2 focus:ring-pink-hot/20 transition-all
+  - Select: same as input + appearance-none
+  - Textarea: same as input + min-h-[120px] resize-none
+  - Submit: w-full bg-pink-hot text-white font-body uppercase text-sm
+    tracking-wider py-4 rounded-full hover:bg-pink-600 transition-colors
+    font-semibold
+  - Success: text-center py-12, checkmark icon, font-script accent
+
+  PLACEHOLDER:
+  - Download a wide wedding photo from Unsplash for the background:
+    Search: "wedding venue", "wedding reception wide"
+    Save as assets/img/cta-bg.jpg
+
+
+================================================================================
+  SECTION 11: FAQ
+================================================================================
+
+  PURPOSE:
+  Answer common questions, reduce friction before booking.
+
+  DESIGN:
+  - Background: white
+  - Header:
+      [Poppins uppercase, small, hot pink] GOT QUESTIONS?
+      [Playfair Display, large, black] Frequently Asked
+
+  - Accordion Q&A (8 items):
+    - Question: Poppins medium, 16-18px
+    - Toggle: [+] rotates to [x], hot pink
+    - Answer: Poppins regular, gray, smaller
+    - Active: border-l-4 border-pink-hot
+    - Smooth max-height transition
+    - One open at a time
+
+  QUESTIONS:
+  1. How far in advance should I book?
+  2. What does your pricing look like?
+  3. How long until I receive my final film?
+  4. Do you travel outside Atlanta?
+  5. What equipment do you use?
+  6. Can I request specific songs for my highlight reel?
+  7. Do you offer raw footage?
+  8. What happens if it rains on the wedding day?
+
+  TAILWIND CLASSES:
+  - Section: py-24 px-6 max-w-3xl mx-auto
+  - Item: border-b border-gray-100
+  - Question: w-full flex justify-between items-center py-5 font-body
+    font-medium text-dark text-left text-lg hover:text-pink-hot
+    transition-colors
+  - Toggle icon: text-pink-hot transition-transform duration-300
+    (rotate-45 when open)
+  - Answer: font-body text-warmgray leading-relaxed pb-5
+    overflow-hidden transition-all duration-300
+    (max-h-0 -> max-h-96)
+  - Active: border-l-4 border-pink-hot pl-4
+
+  PLACEHOLDER: None needed — text only.
+
+
+================================================================================
+  SECTION 12: FOOTER
+================================================================================
+
+  PURPOSE:
+  Contact info, social links, brand sign-off.
+
+  DESIGN:
+  - Background: deep black (#1A1A1A)
+  - Three columns (stack on mobile):
+
+    Col 1: Logo + tagline + email + location
+    Col 2: Quick links (Home, About, Services, Portfolio, Contact)
+    Col 3: Social icons (Instagram, TikTok, YouTube, Pinterest)
+
+  - Thin divider (#333)
+  - Bottom: copyright + "Designed with love in ATL" (script, pink)
+
+  TAILWIND CLASSES:
+  - Section: bg-dark text-white py-16 px-6
+  - Grid: max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12
+  - Logo: font-body uppercase tracking-widest + font-script text-pink-hot
+  - Links: font-body text-sm text-gray-400 hover:text-pink-hot
+  - Icons: flex gap-4 w-5 h-5 text-white hover:text-pink-hot
+  - Divider: border-t border-gray-800 mt-12 pt-8
+  - Copyright: font-body text-xs text-gray-500 text-center
+  - "Designed with love": font-script text-pink-hot text-sm
+
+  PLACEHOLDER: None needed — text + icons only.
+
+
+================================================================================
+  FILE STRUCTURE
+================================================================================
+
+  shotsbykissu/
+  ├── index.html                  (single page, all sections)
+  ├── css/
+  │   └── custom.css              (keyframes, clip-paths, scrollbar-hide,
+  │                                anything Tailwind can't handle inline)
+  ├── js/
+  │   ├── main.js                 (nav scroll, smooth scroll, preloader)
+  │   ├── hero.js                 (clip-path blob animation)
+  │   ├── portfolio.js            (filter + GLightbox init)
+  │   ├── testimonials.js         (Swiper init)
+  │   ├── faq.js                  (accordion logic)
+  │   └── form.js                 (Formspree submission + success/error)
+  ├── assets/
+  │   ├── video/
+  │   │   ├── hero-reel.mp4       (placeholder: Pexels wedding video)
+  │   │   └── reels/
+  │   │       ├── reel-01.mp4     (placeholder: Pexels vertical clips)
+  │   │       ├── reel-02.mp4
+  │   │       └── ...
+  │   ├── img/
+  │   │   ├── logo-white.svg
+  │   │   ├── logo-dark.svg
+  │   │   ├── about-kissu.webp    (placeholder: Unsplash portrait)
+  │   │   ├── hero-poster.jpg     (placeholder: Pexels still frame)
+  │   │   ├── cta-bg.jpg          (placeholder: Unsplash wedding venue)
+  │   │   ├── portfolio/          (placeholder: 8-12 Unsplash images)
+  │   │   │   ├── portfolio-01.webp
+  │   │   │   └── ...
+  │   │   └── reels/              (placeholder: 5 portrait Unsplash imgs)
+  │   │       ├── reel-01.webp
+  │   │       └── ...
+  │   └── icons/
+  │       └── (service SVG icons)
+  └── favicon.ico
+
+
+================================================================================
+  EXECUTION PLAN & BUILD ORDER
+================================================================================
+
+  PHASE 1: FOUNDATION (Day 1-2)
+  ─────────────────────────────
+  [ ] Set up project folder structure
+  [ ] Create index.html with semantic skeleton (all 12 sections)
+  [ ] Add Tailwind CSS CDN with custom theme config
+  [ ] Import Google Fonts (Playfair Display, Dancing Script, Poppins)
+  [ ] Create custom.css for keyframes, clip-paths, scrollbar-hide
+  [ ] Download all placeholder images and videos from Pexels/Unsplash
+  [ ] Deploy empty shell to Netlify for live preview
+
+  PHASE 2: NAVIGATION + HERO (Day 3-5)
+  ─────────────────────────────────────
+  [ ] Build sticky nav (transparent -> white on scroll)
+  [ ] Build mobile hamburger menu with overlay
+  [ ] Implement hero with background <video> + placeholder video
+  [ ] Build clip-path blob animation on scroll
+  [ ] Add hero text overlay + CTA buttons
+  [ ] Add bounce scroll indicator
+  [ ] Build preloader animation
+  [ ] Test video on mobile, verify poster fallback works
+
+  PHASE 3: ABOUT + SERVICES (Day 6-7)
+  ────────────────────────────────────
+  [ ] Build about section (two-col, blob decoration)
+  [ ] Add placeholder portrait image
+  [ ] Style typography and signature quote
+  [ ] Build services cards with hover effects
+  [ ] Source or create SVG line icons
+  [ ] Add scroll fade-in animations
+
+  PHASE 4: PORTFOLIO (Day 8-10)
+  ─────────────────────────────
+  [ ] Build masonry grid with placeholder thumbnails
+  [ ] Implement hover overlays (dark + play icon + title)
+  [ ] Integrate GLightbox for video playback
+  [ ] Add filter tabs (optional)
+  [ ] Optimize all images (WebP, lazy loading)
+
+  PHASE 5: PROCESS + TESTIMONIALS (Day 11-12)
+  ────────────────────────────────────────────
+  [ ] Build 4-step timeline (horizontal desktop, vertical mobile)
+  [ ] Animate connecting line on scroll
+  [ ] Staggered fade-in for steps
+  [ ] Build Swiper.js testimonial carousel with placeholder quotes
+  [ ] Style slides, decorative quotes, stars
+  [ ] Configure autoplay + dot navigation
+
+  PHASE 6: REELS + BOOKING + FAQ (Day 13-14)
+  ───────────────────────────────────────────
+  [ ] Build reels section with 9:16 rectangle cards
+  [ ] Add placeholder portrait images to reel cards
+  [ ] Implement hover effects (scale, glow, play icon)
+  [ ] Set up horizontal scroll with snap on mobile
+  [ ] Add view counts and reel titles on overlay
+  [ ] Create Formspree account + new form
+  [ ] Build booking form with all fields + validation
+  [ ] Wire form to Formspree (POST, honeypot, _subject)
+  [ ] Build success/error states
+  [ ] Test submissions end-to-end
+  [ ] Build FAQ accordion
+
+  PHASE 7: FOOTER + POLISH (Day 15-16)
+  ─────────────────────────────────────
+  [ ] Build footer (3-col, socials, copyright)
+  [ ] Full responsive testing (mobile, tablet, desktop)
+  [ ] Cross-browser testing (Chrome, Safari, Firefox, Edge)
+  [ ] Compress images, lazy load everything
+  [ ] Lighthouse audit (target 90+ all categories)
+  [ ] Add meta tags (SEO, Open Graph)
+  [ ] Add favicon + Apple touch icons
+  [ ] Final deploy
+
+  PHASE 8: REAL CONTENT & LAUNCH (Day 17-18)
+  ───────────────────────────────────────────
+  [ ] Replace ALL placeholder images with real photos
+  [ ] Replace placeholder video with real showreel
+  [ ] Replace placeholder reel thumbnails with real reel screenshots
+  [ ] Add real testimonials
+  [ ] Finalize all copy
+  [ ] Connect custom domain
+  [ ] SSL (auto via Netlify)
+  [ ] Google Search Console sitemap
+  [ ] LAUNCH
+
+
+================================================================================
+  FORMSPREE SETUP GUIDE (FREE)
+================================================================================
+
+  1. Go to https://formspree.io — sign up free
+  2. Click "New Form" — name it "SHOTSBYKISSU Booking"
+  3. Copy endpoint: https://formspree.io/f/xABcdEfG
+  4. Paste as form action in index.html
+  5. Free tier includes:
+     - 50 submissions/month
+     - Email notifications
+     - Spam filtering (honeypot + reCAPTCHA)
+     - Submission dashboard + CSV export
+     - Optional auto-reply email
+  6. Set notification email in Formspree dashboard
+  7. Optional: custom auto-reply ("Thanks for reaching out! I'll get
+     back to you within 24 hours.")
+
+
+================================================================================
+  PLACEHOLDER ASSET DOWNLOAD CHECKLIST
+================================================================================
+
+  From https://pexels.com and https://unsplash.com (all free, no
+  attribution required for Pexels, credit appreciated for Unsplash):
+
+  VIDEOS:
+  [ ] Hero reel: 1 cinematic wedding video (landscape, 1080p, <10MB)
+      Search: "wedding cinematic highlights"
+      Save: assets/video/hero-reel.mp4
+
+  [ ] Reel clips: 5 short vertical wedding clips (portrait, 1080x1920)
+      Search: "wedding vertical", "bride getting ready vertical"
+      Save: assets/video/reels/reel-01.mp4 through reel-05.mp4
+      (Optional — can use static images for reels instead)
+
+  IMAGES:
+  [ ] Hero poster: 1 still frame from hero video or wedding wide shot
+      Save: assets/img/hero-poster.jpg
+
+  [ ] About photo: 1 portrait of a female photographer with camera
+      Search: "woman photographer", "black woman camera"
+      Save: assets/img/about-kissu.webp
+
+  [ ] Portfolio thumbnails: 8-12 wedding/event photos (mix of sizes)
+      Search: "wedding ceremony", "wedding reception", "first dance",
+      "wedding couple", "birthday celebration", "event party"
+      Save: assets/img/portfolio/portfolio-01.webp through 12
+
+  [ ] Reel thumbnails: 5 portrait-orientation images (9:16 ratio)
+      Search: "bride getting ready", "wedding dance", "couple sunset
+      portrait", "wedding cake", "reception party"
+      IMPORTANT: Must be portrait/vertical images!
+      Save: assets/img/reels/reel-01.webp through reel-05.webp
+
+  [ ] CTA background: 1 wide wedding venue / reception image
+      Search: "wedding venue", "wedding reception hall"
+      Save: assets/img/cta-bg.jpg
+
+
+================================================================================
+  DESIGN PRINCIPLES
+================================================================================
+
+  1. MOBILE FIRST — build for phones, enhance for desktop
+  2. PERFORMANCE — compress everything, lazy load, minimal JS libs
+  3. ACCESSIBILITY — contrast ratios (pink on white needs care!),
+     alt text, keyboard nav, ARIA labels, focus-visible states
+  4. CONSISTENCY — Tailwind custom theme enforces spacing/colors/type
+  5. WHITESPACE — py-24 minimum padding between sections
+  6. CTA VISIBILITY — "Book Now" always in reach (sticky nav + CTAs)
+  7. TAILWIND-FIRST — avoid custom CSS unless necessary (keyframes,
+     clip-paths, scrollbar-hide). Everything else in Tailwind classes.
+
+
+================================================================================
+  END OF PLAN
+================================================================================

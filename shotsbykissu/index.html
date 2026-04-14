@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SHOTSBYKISSU — Atlanta's creative wedding and event videographer. Every love story deserves a highlight reel." />
+  <meta property="og:title" content="SHOTSBYKISSU — Wedding & Event Videographer, Atlanta" />
+  <meta property="og:description" content="Your moments. My vision. Cinematic wedding films and event content." />
+  <meta property="og:type" content="website" />
+
+  <title>SHOTSBYKISSU — Wedding & Event Videographer | Atlanta, GA</title>
+
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pink: {
+              hot:   '#FF2D7B',
+              soft:  '#FFB6D5',
+              blush: '#FFF0F5',
+              600:   '#E81F68',
+            },
+            dark:     '#1A1A1A',
+            offwhite: '#FAFAFA',
+            warmgray: '#8C8C8C',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            script:  ['"Dancing Script"', 'cursive'],
+            body:    ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body class="font-body bg-offwhite text-dark antialiased">
+
+  <!-- ====================================================== -->
+  <!-- 1. PRELOADER                                           -->
+  <!-- ====================================================== -->
+  <div id="preloader" class="fixed inset-0 z-[9999] bg-dark flex items-center justify-center">
+    <h1 id="preloader-text" class="font-script text-pink-hot text-6xl md:text-8xl">
+      <span>S</span><span>H</span><span>O</span><span>T</span><span>S</span><span>B</span><span>Y</span><span>K</span><span>I</span><span>S</span><span>S</span><span>U</span>
+    </h1>
+  </div>
+
+  <!-- ====================================================== -->
+  <!-- 2. NAVIGATION                                          -->
+  <!-- ====================================================== -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+      <a href="#" class="flex items-baseline gap-2">
+        <span class="nav-logo-shots font-body uppercase tracking-widest text-white text-sm font-light transition-colors">SHOTS BY</span>
+        <span class="font-script text-pink-hot text-3xl leading-none">Kissu</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="#portfolio" class="nav-link">Work</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="hidden md:inline-block bg-pink-hot text-white font-body uppercase text-xs tracking-wider px-6 py-2 rounded-full hover:bg-pink-600 transition-colors">Book Now</a>
+
+      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 z-[60]" aria-label="Menu">
+        <span class="hamburger-line block w-7 h-0.5 bg-white transition-all"></span>
+        <span class="hamburger-line block w-7 h-0.5 bg-white transition-all"></span>
+        <span class="hamburger-line block w-7 h-0.5 bg-white transition-all"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-dark/95 flex-col items-center justify-center gap-8 hidden">
+      <a href="#portfolio" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">Work</a>
+      <a href="#about" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">About</a>
+      <a href="#services" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">Services</a>
+      <a href="#process" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">Process</a>
+      <a href="#contact" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">Contact</a>
+      <a href="#contact" class="mobile-link bg-pink-hot text-white uppercase text-sm tracking-wider px-8 py-3 rounded-full mt-4">Book Now</a>
+      <div class="flex gap-6 mt-6 text-white">
+        <a href="#" aria-label="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 2.2c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.3.8s-.6.8-.8 1.3c-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.3s.8.6 1.3.8c.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.3-.8s.6-.8.8-1.3c.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.3s-.8-.6-1.3-.8c-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.7A5.9 5.9 0 1 1 12 18a5.9 5.9 0 0 1 0-11.9zm0 9.8A3.9 3.9 0 1 0 12 10a3.9 3.9 0 0 0 0 7.9zm6.1-10A1.4 1.4 0 1 1 16.7 6a1.4 1.4 0 0 1 1.4 1.4z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.3 6.3a4.5 4.5 0 0 1-3.8-2.1h-3v13.2a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V12a5.8 5.8 0 1 0 4.9 5.7V9.9a7.6 7.6 0 0 0 3.7 1V8a4.5 4.5 0 0 1 0-1.7z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====================================================== -->
+  <!-- 3. HERO                                                -->
+  <!-- ====================================================== -->
+  <section id="hero" class="relative h-screen w-full overflow-hidden bg-pink-blush">
+    <div id="hero-video-wrap" class="absolute inset-0">
+      <video
+        id="hero-video"
+        class="absolute inset-0 w-full h-full object-cover"
+        autoplay muted loop playsinline
+        poster="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80">
+        <source src="https://cdn.coverr.co/videos/coverr-a-bride-and-groom-cutting-their-wedding-cake-2633/1080p.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <p class="font-body uppercase text-xs md:text-sm tracking-[0.3em] text-white/90 mb-6" data-aos="fade-up">
+        Atlanta's Creative Wedding Videographer
+      </p>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl text-white leading-tight max-w-4xl" data-aos="fade-up" data-aos-delay="200">
+        Every love story<br />deserves a highlight reel
+      </h1>
+      <p class="font-script text-pink-hot text-3xl md:text-5xl mt-6 -rotate-3" data-aos="fade-up" data-aos-delay="400">
+        ~ Kissu ~
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-10" data-aos="fade-up" data-aos-delay="600">
+        <a href="#portfolio" class="bg-pink-hot text-white font-body uppercase text-xs tracking-wider px-8 py-3 rounded-full hover:bg-pink-600 transition-colors">View My Work</a>
+        <a href="#contact" class="bg-white/10 backdrop-blur border border-white text-white font-body uppercase text-xs tracking-wider px-8 py-3 rounded-full hover:bg-white hover:text-dark transition-all">Book Your Date</a>
+      </div>
+    </div>
+
+    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce text-white" aria-label="Scroll down">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+    </a>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 4. ABOUT                                               -->
+  <!-- ====================================================== -->
+  <section id="about" class="py-24 md:py-32 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+      <div class="md:col-span-3 relative" data-aos="fade-right">
+        <div class="absolute -z-10 bg-pink-soft rounded-full blur-3xl opacity-40 w-96 h-96 -top-10 -left-10"></div>
+        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=900&q=80"
+             alt="Kissu — videographer portrait"
+             class="w-full rounded-3xl shadow-xl object-cover aspect-[4/5]" />
+      </div>
+      <div class="md:col-span-2" data-aos="fade-left">
+        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">Nice to meet you</p>
+        <h2 class="font-display text-4xl md:text-5xl text-dark mb-6">I'm Kissu</h2>
+        <p class="font-body text-warmgray leading-relaxed mb-5">
+          I'm an Atlanta-based wedding and event videographer obsessed with the in-between moments — the teary laugh during vows, the first dance spin, the quiet glance across the reception hall.
+        </p>
+        <p class="font-body text-warmgray leading-relaxed mb-5">
+          My goal isn't just to document your day. It's to hand you a film that feels exactly the way it felt to live it — romantic, a little chaotic, and unforgettable.
+        </p>
+        <p class="font-body text-warmgray leading-relaxed mb-8">
+          Born and raised in the ATL, shooting love stories anywhere the plane goes.
+        </p>
+        <p class="font-script text-pink-hot text-2xl leading-snug">
+          "I don't just record events — I turn them into films you'll rewatch forever."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 5. SERVICES                                            -->
+  <!-- ====================================================== -->
+  <section id="services" class="bg-pink-blush py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">What I Do</p>
+        <h2 class="font-display text-4xl md:text-5xl text-dark">Services</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="service-card bg-white rounded-2xl p-8 text-center shadow-sm transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+          <svg class="w-12 h-12 mx-auto text-pink-hot mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.5-2.5v9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+          <h3 class="font-display text-2xl text-dark mb-3">Wedding Films</h3>
+          <p class="font-body text-warmgray text-sm leading-relaxed mb-6">Cinematic highlight reels and full-day coverage — from getting-ready moments to last dance.</p>
+          <a href="#contact" class="inline-block border-2 border-pink-hot text-pink-hot font-body uppercase text-xs tracking-wider px-6 py-2 rounded-full hover:bg-pink-hot hover:text-white transition-all">Learn More</a>
+        </div>
+
+        <div class="service-card bg-white rounded-2xl p-8 text-center shadow-sm transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
+          <svg class="w-12 h-12 mx-auto text-pink-hot mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          <h3 class="font-display text-2xl text-dark mb-3">Event Content</h3>
+          <p class="font-body text-warmgray text-sm leading-relaxed mb-6">Corporate events, birthdays, galas — social-ready edits that keep the energy alive long after the night ends.</p>
+          <a href="#contact" class="inline-block border-2 border-pink-hot text-pink-hot font-body uppercase text-xs tracking-wider px-6 py-2 rounded-full hover:bg-pink-hot hover:text-white transition-all">Learn More</a>
+        </div>
+
+        <div class="service-card bg-white rounded-2xl p-8 text-center shadow-sm transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+          <svg class="w-12 h-12 mx-auto text-pink-hot mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-4 16v-8m-4 4h8M5 8h14l-1 13H6L5 8z" /></svg>
+          <h3 class="font-display text-2xl text-dark mb-3">Content Creation</h3>
+          <p class="font-body text-warmgray text-sm leading-relaxed mb-6">Brand videos, social reels, and BTS packages built for Instagram, TikTok, and beyond.</p>
+          <a href="#contact" class="inline-block border-2 border-pink-hot text-pink-hot font-body uppercase text-xs tracking-wider px-6 py-2 rounded-full hover:bg-pink-hot hover:text-white transition-all">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 6. PORTFOLIO                                           -->
+  <!-- ====================================================== -->
+  <section id="portfolio" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">Portfolio</p>
+        <h2 class="font-display text-4xl md:text-5xl text-dark">Recent Work</h2>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 mb-12 font-body uppercase text-sm tracking-wider">
+        <button class="portfolio-filter active text-pink-hot border-b-2 border-pink-hot font-semibold pb-1" data-filter="all">All</button>
+        <button class="portfolio-filter text-warmgray hover:text-pink-hot transition-colors pb-1" data-filter="weddings">Weddings</button>
+        <button class="portfolio-filter text-warmgray hover:text-pink-hot transition-colors pb-1" data-filter="events">Events</button>
+        <button class="portfolio-filter text-warmgray hover:text-pink-hot transition-colors pb-1" data-filter="content">Content</button>
+      </div>
+
+      <div id="portfolio-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[220px]">
+        <a href="https://player.vimeo.com/external/370467553.sd.mp4?s=0aa9c5a67d3a2e6a3e1b4a3b4a3b4a3b4a3b4a3b&profile_id=164" class="glightbox portfolio-item md:col-span-2 md:row-span-2 relative group rounded-xl overflow-hidden cursor-pointer" data-category="weddings" data-gallery="portfolio" data-aos="fade-up">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="Wedding ceremony" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+            <svg class="w-16 h-16 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <p class="font-display text-white text-xl">Aisha & Marcus</p>
+            <p class="font-body text-white/70 text-xs uppercase tracking-wider mt-1">Watch Film</p>
+          </div>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="weddings" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="First dance" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <p class="font-display text-white text-lg">First Dance</p>
+          </div>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="weddings" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Couple portrait" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <p class="font-display text-white text-lg">Golden Hour</p>
+          </div>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="events" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Event celebration" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <p class="font-display text-white text-lg">Gala Night</p>
+          </div>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="events" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Birthday party" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <p class="font-display text-white text-lg">Birthday Bash</p>
+          </div>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="weddings" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Reception" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <p class="font-display text-white text-lg">Reception</p>
+          </div>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="content" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Brand shoot" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <p class="font-display text-white text-lg">Brand Story</p>
+          </div>
+        </a>
+
+        <a href="https://images.unsplash.com/photo-1525772764200-be829a350797?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="content" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1525772764200-be829a350797?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Social reel" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <p class="font-display text-white text-lg">Social Reel</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#contact" class="inline-block bg-pink-hot text-white font-body uppercase text-xs tracking-wider px-8 py-3 rounded-full hover:bg-pink-600 transition-colors">View All Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 7. PROCESS                                             -->
+  <!-- ====================================================== -->
+  <section id="process" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-20" data-aos="fade-up">
+        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">How It Works</p>
+        <h2 class="font-display text-4xl md:text-5xl text-dark">The Process</h2>
+      </div>
+
+      <div class="relative flex flex-col md:flex-row justify-between items-start gap-12">
+        <div class="hidden md:block absolute top-10 left-[12%] right-[12%] h-0.5 bg-pink-soft"></div>
+
+        <div class="flex-1 text-center relative" data-aos="fade-up" data-aos-delay="0">
+          <span class="font-display text-7xl text-pink-soft/40 absolute -top-8 left-1/2 -translate-x-1/2">01</span>
+          <div class="relative w-20 h-20 mx-auto rounded-full bg-white border-2 border-pink-hot flex items-center justify-center mb-4 z-10">
+            <svg class="w-8 h-8 text-pink-hot" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+          </div>
+          <h3 class="font-body uppercase text-sm tracking-wider font-semibold text-dark mb-3">Inquire</h3>
+          <p class="font-body text-warmgray text-sm leading-relaxed max-w-xs mx-auto">Fill out the contact form or DM me. Tell me about your vision, date, and vibe.</p>
+        </div>
+
+        <div class="flex-1 text-center relative" data-aos="fade-up" data-aos-delay="150">
+          <span class="font-display text-7xl text-pink-soft/40 absolute -top-8 left-1/2 -translate-x-1/2">02</span>
+          <div class="relative w-20 h-20 mx-auto rounded-full bg-white border-2 border-pink-hot flex items-center justify-center mb-4 z-10">
+            <svg class="w-8 h-8 text-pink-hot" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+          </div>
+          <h3 class="font-body uppercase text-sm tracking-wider font-semibold text-dark mb-3">Plan</h3>
+          <p class="font-body text-warmgray text-sm leading-relaxed max-w-xs mx-auto">We hop on a call, plan the shot list, scout locations, and lock in the details.</p>
+        </div>
+
+        <div class="flex-1 text-center relative" data-aos="fade-up" data-aos-delay="300">
+          <span class="font-display text-7xl text-pink-soft/40 absolute -top-8 left-1/2 -translate-x-1/2">03</span>
+          <div class="relative w-20 h-20 mx-auto rounded-full bg-white border-2 border-pink-hot flex items-center justify-center mb-4 z-10">
+            <svg class="w-8 h-8 text-pink-hot" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.5-2.5v9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+          </div>
+          <h3 class="font-body uppercase text-sm tracking-wider font-semibold text-dark mb-3">Create</h3>
+          <p class="font-body text-warmgray text-sm leading-relaxed max-w-xs mx-auto">I show up, blend in, and capture every genuine moment — no stiff poses, just real magic.</p>
+        </div>
+
+        <div class="flex-1 text-center relative" data-aos="fade-up" data-aos-delay="450">
+          <span class="font-display text-7xl text-pink-soft/40 absolute -top-8 left-1/2 -translate-x-1/2">04</span>
+          <div class="relative w-20 h-20 mx-auto rounded-full bg-white border-2 border-pink-hot flex items-center justify-center mb-4 z-10">
+            <svg class="w-8 h-8 text-pink-hot" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="font-body uppercase text-sm tracking-wider font-semibold text-dark mb-3">Deliver</h3>
+          <p class="font-body text-warmgray text-sm leading-relaxed max-w-xs mx-auto">Your cinematic film is edited, color-graded, and delivered within 4-6 weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 8. TESTIMONIALS                                        -->
+  <!-- ====================================================== -->
+  <section id="testimonials" class="bg-pink-blush py-24 px-6 overflow-hidden">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">Kind Words</p>
+        <h2 class="font-display text-4xl md:text-5xl text-dark">What Clients Say</h2>
+      </div>
+
+      <div class="swiper testimonials-swiper relative">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="max-w-3xl mx-auto text-center relative px-6">
+              <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-display text-[160px] text-pink-soft/30 pointer-events-none leading-none select-none">"</span>
+              <div class="flex justify-center gap-1 text-pink-hot mb-6 relative z-10">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+              </div>
+              <p class="font-display italic text-xl md:text-2xl text-dark leading-relaxed mb-8 relative z-10">
+                Kissu captured our wedding day better than we could have ever imagined. Every time we rewatch our film, we cry happy tears. She saw moments we didn't even notice were happening.
+              </p>
+              <p class="font-body font-semibold text-dark">Aisha & Marcus</p>
+              <p class="font-body text-warmgray text-sm">Atlanta, GA · June 2025</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="max-w-3xl mx-auto text-center relative px-6">
+              <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-display text-[160px] text-pink-soft/30 pointer-events-none leading-none select-none">"</span>
+              <div class="flex justify-center gap-1 text-pink-hot mb-6">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+              </div>
+              <p class="font-display italic text-xl md:text-2xl text-dark leading-relaxed mb-8">
+                Booking Kissu was the best decision we made for our wedding. She's warm, professional, and her editing is on another level. Our families fight over who gets to watch the film next.
+              </p>
+              <p class="font-body font-semibold text-dark">Taylor & Jordan</p>
+              <p class="font-body text-warmgray text-sm">Savannah, GA · September 2025</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="max-w-3xl mx-auto text-center relative px-6">
+              <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-display text-[160px] text-pink-soft/30 pointer-events-none leading-none select-none">"</span>
+              <div class="flex justify-center gap-1 text-pink-hot mb-6">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
+              </div>
+              <p class="font-display italic text-xl md:text-2xl text-dark leading-relaxed mb-8">
+                Kissu made our corporate gala feel like a movie premiere. The highlight reel she delivered got more engagement than anything else we posted that quarter.
+              </p>
+              <p class="font-body font-semibold text-dark">Brianna & DeAndre</p>
+              <p class="font-body text-warmgray text-sm">Atlanta, GA · November 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination !bottom-0 !relative mt-10"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 9. REELS                                               -->
+  <!-- ====================================================== -->
+  <section id="reels" class="py-24 px-6 text-center">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-script text-pink-hot text-4xl md:text-5xl mb-2" data-aos="fade-up">@shotsbykissu</h2>
+      <p class="font-body text-warmgray text-sm mb-1" data-aos="fade-up" data-aos-delay="100">Follow along for behind-the-scenes</p>
+      <p class="font-body text-warmgray text-xs mb-12" data-aos="fade-up" data-aos-delay="200">Wedding reels, BTS, and love stories</p>
+
+      <div class="flex gap-4 justify-center overflow-x-auto md:overflow-visible pb-4 snap-x snap-mandatory md:snap-none scrollbar-hide px-2">
+        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80" alt="Getting Ready Moments" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <div class="absolute bottom-4 left-3 right-3 text-left">
+            <p class="font-body text-white text-xs font-medium leading-tight">Getting Ready Moments</p>
+            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              24.5K views
+            </p>
+          </div>
+          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
+        </a>
+
+        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=500&q=80" alt="First Look Reaction" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <div class="absolute bottom-4 left-3 right-3 text-left">
+            <p class="font-body text-white text-xs font-medium leading-tight">First Look Reaction</p>
+            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              18.2K views
+            </p>
+          </div>
+          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
+        </a>
+
+        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=500&q=80" alt="The Vows" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <div class="absolute bottom-4 left-3 right-3 text-left">
+            <p class="font-body text-white text-xs font-medium leading-tight">The Vows That Made Us Cry</p>
+            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              31.7K views
+            </p>
+          </div>
+          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
+        </a>
+
+        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=500&q=80" alt="Reception Dance Off" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <div class="absolute bottom-4 left-3 right-3 text-left">
+            <p class="font-body text-white text-xs font-medium leading-tight">Reception Dance Off</p>
+            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              42.1K views
+            </p>
+          </div>
+          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
+        </a>
+
+        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=500&q=80" alt="Golden Hour Portraits" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <div class="absolute bottom-4 left-3 right-3 text-left">
+            <p class="font-body text-white text-xs font-medium leading-tight">Golden Hour Portraits</p>
+            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              15.8K views
+            </p>
+          </div>
+          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
+        </a>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+        <a href="#" class="border-2 border-pink-hot text-pink-hot font-body uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-pink-hot hover:text-white transition-all">Follow on Instagram</a>
+        <a href="#" class="border-2 border-pink-hot text-pink-hot font-body uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-pink-hot hover:text-white transition-all">Watch on TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 10. CTA / BOOKING FORM                                 -->
+  <!-- ====================================================== -->
+  <section id="contact" class="relative py-24 px-6 bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=2000&q=80');">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-soft mb-4">Ready to create something beautiful?</p>
+        <h2 class="font-display text-4xl md:text-6xl text-white mb-6 leading-tight">Let's tell your story</h2>
+        <p class="font-body text-white/80 leading-relaxed mb-4">
+          Currently booking for 2026. Limited dates available — the calendar fills fast, especially for peak season.
+        </p>
+        <p class="font-script text-pink-soft text-3xl">xoxo, Kissu</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl" data-aos="fade-left">
+        <form id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_subject" value="New Booking Inquiry - SHOTSBYKISSU" />
+
+          <div>
+            <label class="font-body text-sm text-dark font-medium mb-1 block">Your Name *</label>
+            <input type="text" name="name" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
+          </div>
+
+          <div>
+            <label class="font-body text-sm text-dark font-medium mb-1 block">Email Address *</label>
+            <input type="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
+          </div>
+
+          <div>
+            <label class="font-body text-sm text-dark font-medium mb-1 block">Phone Number</label>
+            <input type="tel" name="phone" class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="font-body text-sm text-dark font-medium mb-1 block">Event Type *</label>
+              <select name="event_type" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 appearance-none bg-white transition-all">
+                <option value="">Select...</option>
+                <option>Wedding</option>
+                <option>Birthday</option>
+                <option>Corporate</option>
+                <option>Content</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="font-body text-sm text-dark font-medium mb-1 block">Event Date *</label>
+              <input type="date" name="event_date" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
+            </div>
+          </div>
+
+          <div>
+            <label class="font-body text-sm text-dark font-medium mb-1 block">Event Location</label>
+            <input type="text" name="location" placeholder="City, venue, or TBD" class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
+          </div>
+
+          <div>
+            <label class="font-body text-sm text-dark font-medium mb-1 block">Tell me about your vision *</label>
+            <textarea name="message" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 min-h-[120px] resize-none transition-all"></textarea>
+          </div>
+
+          <div>
+            <label class="font-body text-sm text-dark font-medium mb-1 block">How did you hear about me?</label>
+            <select name="referral" class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 appearance-none bg-white transition-all">
+              <option value="">Select...</option>
+              <option>Instagram</option>
+              <option>TikTok</option>
+              <option>Google</option>
+              <option>Referral</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full bg-pink-hot text-white font-body uppercase text-sm tracking-wider py-4 rounded-full hover:bg-pink-600 transition-colors font-semibold">
+            Let's Create Magic
+          </button>
+        </form>
+
+        <div id="form-success" class="hidden text-center py-12">
+          <svg class="w-16 h-16 mx-auto text-pink-hot mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <h3 class="font-display text-2xl text-dark mb-2">Thank you!</h3>
+          <p class="font-body text-warmgray mb-3">I'll be in touch within 24 hours.</p>
+          <p class="font-script text-pink-hot text-xl">xoxo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 11. FAQ                                                -->
+  <!-- ====================================================== -->
+  <section id="faq" class="py-24 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">Got Questions?</p>
+        <h2 class="font-display text-4xl md:text-5xl text-dark">Frequently Asked</h2>
+      </div>
+
+      <div class="space-y-1" id="faq-list">
+        <div class="faq-item border-b border-gray-100">
+          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
+            <span>How far in advance should I book?</span>
+            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
+            <p class="pb-5">For weddings, 6-12 months ahead is ideal, especially for peak season (April-October). For events and content, 2-4 weeks works for most date ranges.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-gray-100">
+          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
+            <span>What does your pricing look like?</span>
+            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
+            <p class="pb-5">Wedding films start at $2,800 for a half-day highlight package. Full-day and luxury packages scale up from there. Event and content pricing is custom — fill out the form and I'll send a full guide.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-gray-100">
+          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
+            <span>How long until I receive my final film?</span>
+            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
+            <p class="pb-5">Highlight reels: 4-6 weeks. Full-length films: 8-10 weeks. You'll also get a 60-second social teaser within a week of your event.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-gray-100">
+          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
+            <span>Do you travel outside Atlanta?</span>
+            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
+            <p class="pb-5">Absolutely. I travel nationwide and have shot destination weddings in the Caribbean and Europe. Travel fees depend on location and date.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-gray-100">
+          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
+            <span>What equipment do you use?</span>
+            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
+            <p class="pb-5">Sony FX3 and A7S III cinema bodies, a range of G Master primes, DJI gimbal, Mavic 3 drone (where permitted), and professional lighting and audio. Redundant backups on everything.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-gray-100">
+          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
+            <span>Can I request specific songs for my highlight reel?</span>
+            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
+            <p class="pb-5">Yes — with a caveat. I use licensed music libraries to stay copyright-compliant on socials. If you have a specific track in mind, I'll find the closest licensed match or work with you on alternatives.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-gray-100">
+          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
+            <span>Do you offer raw footage?</span>
+            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
+            <p class="pb-5">Raw footage is available as an add-on for most packages. It's unedited, ungraded, and chunky (think hundreds of GB), so it's best for couples who want every second.</p>
+          </div>
+        </div>
+
+        <div class="faq-item border-b border-gray-100">
+          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
+            <span>What happens if it rains on the wedding day?</span>
+            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
+          </button>
+          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
+            <p class="pb-5">Rain makes films gorgeous, honestly. I come prepared with weather covers, backup lighting, and a rain-or-shine attitude. Some of my favorite shots have been under umbrellas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 12. FOOTER                                             -->
+  <!-- ====================================================== -->
+  <footer class="bg-dark text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div>
+        <div class="flex items-baseline gap-2 mb-4">
+          <span class="font-body uppercase tracking-widest text-sm font-light">SHOTS BY</span>
+          <span class="font-script text-pink-hot text-3xl leading-none">Kissu</span>
+        </div>
+        <p class="font-script text-pink-soft text-lg mb-4">Your moments. My vision.</p>
+        <p class="font-body text-sm text-gray-400">hello@shotsbykissu.com</p>
+        <p class="font-body text-sm text-gray-400">Atlanta, GA</p>
+      </div>
+
+      <div>
+        <h4 class="font-body uppercase text-xs tracking-widest text-pink-hot mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#hero" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">Home</a></li>
+          <li><a href="#about" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">About</a></li>
+          <li><a href="#services" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">Services</a></li>
+          <li><a href="#portfolio" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">Portfolio</a></li>
+          <li><a href="#contact" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-body uppercase text-xs tracking-widest text-pink-hot mb-4">Follow</h4>
+        <div class="flex gap-4">
+          <a href="#" aria-label="Instagram" class="text-white hover:text-pink-hot transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm6.4-8.4a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a>
+          <a href="#" aria-label="TikTok" class="text-white hover:text-pink-hot transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.3 6.3a4.5 4.5 0 0 1-3.8-2.1h-3v13.2a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V12a5.8 5.8 0 1 0 4.9 5.7V9.9a7.6 7.6 0 0 0 3.7 1V8a4.5 4.5 0 0 1 0-1.7z"/></svg></a>
+          <a href="#" aria-label="YouTube" class="text-white hover:text-pink-hot transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+          <a href="#" aria-label="Pinterest" class="text-white hover:text-pink-hot transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.42 7.62 11.17-.1-.95-.2-2.4.04-3.44.22-.93 1.4-5.94 1.4-5.94s-.36-.72-.36-1.78c0-1.67.97-2.91 2.17-2.91 1.02 0 1.52.77 1.52 1.69 0 1.03-.66 2.57-1 4-.28 1.2.6 2.18 1.79 2.18 2.14 0 3.8-2.26 3.8-5.52 0-2.89-2.07-4.9-5.04-4.9-3.43 0-5.45 2.57-5.45 5.23 0 1.04.4 2.15.9 2.75.1.12.11.22.08.34l-.33 1.36c-.05.22-.17.27-.4.16-1.5-.7-2.44-2.88-2.44-4.64 0-3.78 2.75-7.25 7.92-7.25 4.16 0 7.39 2.96 7.39 6.93 0 4.14-2.6 7.47-6.22 7.47-1.22 0-2.36-.63-2.75-1.38l-.75 2.85c-.27 1.05-1 2.37-1.49 3.17C9.57 23.81 10.77 24 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-2">
+      <p class="font-body text-xs text-gray-500">© <span id="year">2026</span> SHOTSBYKISSU. All rights reserved.</p>
+      <p class="font-script text-pink-hot text-sm">Designed with love in ATL</p>
+    </div>
+  </footer>
+
+  <!-- ====================================================== -->
+  <!-- SCRIPTS                                                -->
+  <!-- ====================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/testimonials.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
