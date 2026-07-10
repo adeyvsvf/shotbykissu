@@ -14,8 +14,8 @@
     const start = () => {
       setTimeout(() => {
         preloader.classList.add('fade-out');
-        setTimeout(() => preloader.remove(), 600);
-      }, 2200);
+        setTimeout(() => preloader.remove(), 300);
+      }, 1100);
     };
     if (document.readyState === 'complete') start();
     else window.addEventListener('load', start);
