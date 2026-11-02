@@ -199,8 +199,10 @@ a { color: inherit; }
     transform var(--dur-micro) var(--ease-out);
 }
 .btn:active { transform: scale(0.98); }
-.btn--primary { background: var(--pink-hot); color: var(--ink); }
-.btn--primary:hover { background: var(--ink); color: var(--pink-hot); }
+.btn--primary { background: var(--pink-hot); color: var(--white); }
+.btn--primary:hover { background: var(--ink); color: var(--white); }
+/* On the ink footer an ink hover would vanish, so it flips to white instead */
+.site-footer .btn--primary:hover { background: var(--white); color: var(--ink); }
 .btn--small { min-height: 44px; padding: 0 var(--s-5); }
 .btn--block { width: 100%; }
 .btn[aria-disabled="true"] { cursor: progress; }
