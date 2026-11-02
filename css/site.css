@@ -135,15 +135,19 @@ a { color: inherit; }
   max-width: 52ch;
 }
 
-/* ---------- Logo (the script mark, tinted with CSS) ---------- */
+/* ---------- Logo (the script mark, a plain image so it also works from file://) ---------- */
+/* The image is cropped tight and "Kissu" has no descenders, so its bottom edge is
+   the script baseline. The small negative offset lets the rounded letters dip
+   below the line the way type overshoot does. */
 .logo-mark {
+  --w: 3.4em;
   display: inline-block;
-  width: 3.4em;
-  aspect-ratio: 3 / 1;
-  vertical-align: -0.45em;
-  background-color: var(--pink-hot);
-  -webkit-mask: url("../assets/web/img/logo.png") center / contain no-repeat;
-  mask: url("../assets/web/img/logo.png") center / contain no-repeat;
+  width: var(--w);
+  height: auto;
+  vertical-align: baseline;
+  position: relative;
+  top: calc(var(--w) * 0.029); /* works in both inline text and baseline-aligned flex */
+  margin-left: 0.15em;
 }
 
 /* ---------- Links and buttons ---------- */
@@ -226,7 +230,7 @@ a { color: inherit; }
 }
 .site-header__logo {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: var(--s-1);
   min-height: 44px;
   margin-right: auto;
@@ -342,7 +346,7 @@ a { color: inherit; }
 }
 .hero__content { display: grid; gap: var(--s-4); max-width: 40rem; }
 .hero__brand { font-size: 1.125rem; font-weight: 600; font-stretch: 90%; }
-.logo-mark--hero { width: 4.4em; vertical-align: -0.55em; }
+.logo-mark--hero { --w: 4.4em; }
 .hero__title {
   font-size: var(--text-xl);
   font-weight: 800;
@@ -665,12 +669,12 @@ a { color: inherit; }
 .about__letter .heading-l { margin-bottom: var(--s-2); }
 .about__sign {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: var(--s-2);
   margin-top: var(--s-3);
   font-weight: 600;
 }
-.logo-mark--sign { width: 6.5em; vertical-align: middle; }
+.logo-mark--sign { --w: 6.5em; }
 @media (min-width: 960px) {
   .about { grid-template-columns: 5fr 7fr; column-gap: var(--s-9); }
   .about__media { position: sticky; top: calc(var(--header-h) + var(--s-5)); }
