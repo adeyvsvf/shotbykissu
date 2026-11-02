@@ -15,7 +15,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,6 +36,7 @@
           },
           fontFamily: {
             display: ['"Playfair Display"', 'serif'],
+            hero:    ['Inter', 'sans-serif'],
             script:  ['"Dancing Script"', 'cursive'],
             elegant: ['"Great Vibes"', 'cursive'],
             body:    ['Poppins', 'sans-serif'],
@@ -122,22 +123,24 @@
         autoplay muted loop playsinline>
         <source src="assets/video/wedding.mp4" type="video/mp4" />
       </video>
-      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
     </div>
 
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pb-24 md:pb-0">
-      <p class="font-body uppercase text-[0.6rem] md:text-sm tracking-[0.3em] text-white/90 mb-6" data-aos="fade-up">
-        Content Creator / Videographer
-      </p>
-      <h1 class="font-display text-white leading-[1.2] tracking-wide text-center mx-auto whitespace-nowrap" style="font-size: clamp(1.8rem, 5.5vw, 5rem);" data-aos="fade-up" data-aos-delay="200">
-        Every Moment<br />Deserves To Be Captured
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pb-20 md:pb-0">
+      <!-- Main heading -->
+      <h1 class="font-hero font-extrabold text-white leading-[1.1] tracking-tight text-center mx-auto" style="font-size: clamp(2.8rem, 7.5vw, 108px);" data-aos="fade-up" data-aos-delay="200">
+        Your Story,<br />Through My Lens.
       </h1>
-      <p class="font-script text-pink-hot text-3xl md:text-5xl mt-6 -rotate-3" data-aos="fade-up" data-aos-delay="400">
-        ~ Kissu ~
+
+      <!-- Subtitle -->
+      <p class="font-hero font-normal text-white/70 tracking-[0.15em] mt-8 md:mt-10 max-w-2xl mx-auto leading-relaxed" style="font-size: clamp(14px, 1.5vw, 18px);" data-aos="fade-up" data-aos-delay="350">
+        Luxury content creation for love stories, brands &amp; businesses
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 mt-10 justify-center items-center" data-aos="fade-up" data-aos-delay="600">
-        <a href="#portfolio" class="bg-pink-hot text-white font-body uppercase text-xs tracking-wider px-8 py-3 rounded-full hover:bg-pink-600 transition-colors">View My Work</a>
-        <a href="#contact" class="bg-white/10 backdrop-blur border border-white text-white font-body uppercase text-xs tracking-wider px-8 py-3 rounded-full hover:bg-white hover:text-dark transition-all">Get In Touch</a>
+
+      <!-- CTA buttons -->
+      <div class="flex flex-col sm:flex-row gap-5 mt-12 md:mt-14 justify-center items-center" data-aos="fade-up" data-aos-delay="500">
+        <a href="#portfolio" class="bg-pink-hot text-white font-body uppercase text-xs tracking-[0.2em] px-10 py-4 rounded-full hover:bg-pink-600 hover:shadow-lg hover:shadow-pink-hot/30 transition-all duration-300">View My Work</a>
+        <a href="#contact" class="bg-white/10 backdrop-blur-sm border border-white/40 text-white font-body uppercase text-xs tracking-[0.2em] px-10 py-4 rounded-full hover:bg-white hover:text-dark transition-all duration-300">Get In Touch</a>
       </div>
     </div>
 

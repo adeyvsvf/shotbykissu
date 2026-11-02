@@ -1,0 +1,35 @@
+<!-- HERO SECTION — SHOTBYKISSU -->
+<section id="hero" class="relative h-screen w-full overflow-hidden bg-pink-blush">
+  <!-- Background (replace with video or image as needed) -->
+  <div id="hero-video-wrap" class="absolute inset-0">
+    <!-- Empty frame — swap in a <video>, <img>, or CSS background-image -->
+    <div class="absolute inset-0 w-full h-full bg-gray-800"></div>
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+
+  <!-- Hero content -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pb-20 md:pb-0">
+    <p class="font-body uppercase text-xs md:text-sm tracking-[0.3em] text-white/80 mb-8 md:mb-10" data-aos="fade-up">Shot By Kissu</p>
+
+    <!-- Main heading -->
+    <h1 class="font-hero font-extrabold text-white leading-[1.1] tracking-tight text-center mx-auto" style="font-size: clamp(2.8rem, 7.5vw, 7rem);" data-aos="fade-up" data-aos-delay="200">
+      Your Story,<br />Through My Lens.
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="font-body text-white/70 text-sm md:text-lg tracking-[0.15em] mt-8 md:mt-10 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="350">
+      Luxury content creation for love stories, brands &amp; businesses
+    </p>
+
+    <!-- CTA buttons -->
+    <div class="flex flex-col sm:flex-row gap-5 mt-12 md:mt-14 justify-center items-center" data-aos="fade-up" data-aos-delay="500">
+      <a href="#portfolio" class="bg-pink-hot text-white font-body uppercase text-xs tracking-[0.2em] px-10 py-4 rounded-full hover:bg-pink-600 hover:shadow-lg hover:shadow-pink-hot/30 transition-all duration-300">View My Work</a>
+      <a href="#contact" class="bg-white/10 backdrop-blur-sm border border-white/40 text-white font-body uppercase text-xs tracking-[0.2em] px-10 py-4 rounded-full hover:bg-white hover:text-dark transition-all duration-300">Get In Touch</a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce text-white" aria-label="Scroll down">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+  </a>
+</section>
