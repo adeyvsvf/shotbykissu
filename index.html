@@ -1,780 +1,482 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="description" content="SHOTBYKISSU — Atlanta's creative content creator. Weddings, brand shoots, events, and social media services." />
-  <meta property="og:title" content="SHOTBYKISSU — Content Creator | Atlanta, GA" />
-  <meta property="og:description" content="Your moments. My vision. Weddings, brand shoots, events, and social media content." />
+  <script>document.documentElement.className = 'js';</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shot by Kissu | Wedding, brand &amp; event content creator in Atlanta</title>
+  <meta name="description" content="Luxury content creation for love stories, brands and businesses in Atlanta. Shot on iPhone, edits delivered within 48 hours." />
+  <meta name="theme-color" content="#FAFAFA" />
+  <link rel="canonical" href="https://shotbykissu.com/" />
+
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shotbykissu.com/" />
+  <meta property="og:title" content="Shot by Kissu | Your story, through my lens." />
+  <meta property="og:description" content="Luxury content creation for love stories, brands and businesses in Atlanta. Edits delivered within 48 hours." />
+  <meta property="og:image" content="https://shotbykissu.com/assets/web/img/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <title>SHOTBYKISSU — Content Creator | Atlanta, GA</title>
+  <link rel="icon" type="image/png" href="assets/web/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/web/img/apple-touch-icon.png" />
 
-  <link rel="icon" type="image/png" href="assets/img/favicon/favicon.png" />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&amp;display=swap" />
+  <link rel="preload" as="image" href="assets/web/hero-poster.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="css/site.css" />
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            pink: {
-              hot:   '#FF2D7B',
-              soft:  '#FFB6D5',
-              blush: '#FFF0F5',
-              600:   '#E81F68',
-            },
-            dark:     '#1A1A1A',
-            offwhite: '#FAFAFA',
-            warmgray: '#8C8C8C',
-          },
-          fontFamily: {
-            display: ['"Playfair Display"', 'serif'],
-            hero:    ['Inter', 'sans-serif'],
-            script:  ['"Dancing Script"', 'cursive'],
-            elegant: ['"Great Vibes"', 'cursive'],
-            body:    ['Poppins', 'sans-serif'],
-          },
-        },
-      },
-    };
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Shot by Kissu",
+    "url": "https://shotbykissu.com/",
+    "image": "https://shotbykissu.com/assets/web/img/og.jpg",
+    "description": "Luxury content creation for love stories, brands and businesses.",
+    "email": "hello@shotbykissu.com",
+    "areaServed": "Atlanta, GA",
+    "address": { "@type": "PostalAddress", "addressLocality": "Atlanta", "addressRegion": "GA", "addressCountry": "US" },
+    "founder": { "@type": "Person", "name": "Kissu", "jobTitle": "Content creator" },
+    "sameAs": ["https://www.instagram.com/shotbykissu", "https://www.tiktok.com/@shotbykissu"]
+  }
   </script>
-
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <!-- GLightbox -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/custom.css" />
 </head>
-<body class="font-body bg-offwhite text-dark antialiased overflow-x-hidden">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ====================================================== -->
-  <!-- 1. PRELOADER                                           -->
-  <!-- ====================================================== -->
-  <div id="preloader" class="fixed inset-0 z-[9999] bg-dark flex items-center justify-center">
-    <h1 id="preloader-text" class="font-script text-pink-hot text-6xl md:text-8xl">
-      <span>S</span><span>H</span><span>O</span><span>T</span><span>B</span><span>Y</span><span>K</span><span>I</span><span>S</span><span>S</span><span>U</span>
-    </h1>
+  <!-- Header -->
+  <header class="site-header" data-over-hero="false">
+    <a class="site-header__logo" href="#top" aria-label="Shot by Kissu, back to top">
+      <span class="site-header__shot">Shot by</span>
+      <span class="logo-mark" aria-hidden="true"></span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="site-nav__list">
+        <li><a class="link" href="#work">Work</a></li>
+        <li><a class="link" href="#kind-words">Kind words</a></li>
+        <li><a class="link" href="#services">Services</a></li>
+        <li><a class="link" href="#about">About</a></li>
+        <li><a class="link" href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary btn--small site-header__cta" href="#inquire">Inquire <span aria-hidden="true">↗</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-button__bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <ul class="menu__list">
+      <li><a class="menu__link" href="#work">Work</a></li>
+      <li><a class="menu__link" href="#kind-words">Kind words</a></li>
+      <li><a class="menu__link" href="#services">Services</a></li>
+      <li><a class="menu__link" href="#about">About</a></li>
+      <li><a class="menu__link" href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn--primary" href="#inquire">Inquire <span aria-hidden="true">↗</span></a>
+    <p class="menu__social">
+      <a class="link" href="https://www.instagram.com/shotbykissu">Instagram</a>
+      <a class="link" href="https://www.tiktok.com/@shotbykissu">TikTok</a>
+    </p>
   </div>
 
-  <!-- ====================================================== -->
-  <!-- 2. NAVIGATION                                          -->
-  <!-- ====================================================== -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
-      <a href="#" class="flex items-baseline gap-2">
-        <span class="nav-logo-shots font-body uppercase tracking-widest text-white text-sm font-light transition-colors">SHOT BY</span>
-        <span class="font-script text-pink-hot text-3xl leading-none">Kissu</span>
-      </a>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <video class="hero__video" muted loop playsinline preload="metadata" poster="assets/web/hero-poster.webp" aria-hidden="true">
+          <source src="assets/web/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero__content">
+        <p class="hero__brand">Shot by <span class="logo-mark logo-mark--hero" role="img" aria-label="Kissu"></span></p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line" style="--i: 0">Your story,</span>
+          <span class="hero__line" style="--i: 1">through my lens.</span>
+        </h1>
+        <p class="hero__sub" style="--i: 2">Luxury content creation for love stories, brands &amp; businesses</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#inquire">Inquire <span aria-hidden="true">↗</span></a>
+          <a class="link link--light" href="#work">See the work</a>
+        </div>
+      </div>
+      <button class="hero__pause" type="button" hidden>Pause video</button>
+    </section>
 
-      <ul class="hidden md:flex items-center gap-8">
-        <li><a href="#portfolio" class="nav-link">Work</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#process" class="nav-link">Process</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+    <!-- Work -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="work__head">
+        <h2 class="heading-l" id="work-title">Recent work</h2>
+        <p class="lead work__intro">Shot on iPhone, edited and in your hands within 48 hours.</p>
+        <div class="filters" role="group" aria-label="Filter work">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="love" aria-pressed="false">Love stories</button>
+          <button class="filter" type="button" data-filter="brand" aria-pressed="false">Brands</button>
+          <button class="filter" type="button" data-filter="event" aria-pressed="false">Events</button>
+        </div>
+      </div>
+
+      <ul class="reels" id="reels">
+        <li class="reels__item" data-cat="love">
+          <a class="reel" href="assets/web/reels/c-and-r.mp4" data-reel="c-and-r" data-title="C &amp; R" data-kind="Wedding">
+            <span class="reel__media"><img src="assets/web/posters/c-and-r.webp" width="540" height="960" loading="lazy" decoding="async" alt="Wedding cake with a C and R monogram" /></span>
+            <span class="reel__title">C &amp; R</span>
+            <span class="reel__meta"><span>Wedding</span><span><span class="visually-hidden">Length </span>1:14</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="love">
+          <a class="reel" href="assets/web/reels/s-and-d.mp4" data-reel="s-and-d" data-title="S &amp; D" data-kind="Wedding">
+            <span class="reel__media"><img src="assets/web/posters/s-and-d.webp" width="540" height="960" loading="lazy" decoding="async" alt="Bride in a lace veil looking down at her gloves" /></span>
+            <span class="reel__title">S &amp; D</span>
+            <span class="reel__meta"><span>Wedding</span><span><span class="visually-hidden">Length </span>1:02</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="love">
+          <a class="reel" href="assets/web/reels/k-and-d.mp4" data-reel="k-and-d" data-title="K &amp; D" data-kind="Couple shoot">
+            <span class="reel__media"><img src="assets/web/posters/k-and-d.webp" width="540" height="960" loading="lazy" decoding="async" alt="Couple in black formalwear laughing outside a brick building" /></span>
+            <span class="reel__title">K &amp; D</span>
+            <span class="reel__meta"><span>Couple shoot</span><span><span class="visually-hidden">Length </span>0:19</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="love">
+          <a class="reel" href="assets/web/reels/m-and-b.mp4" data-reel="m-and-b" data-title="M &amp; B" data-kind="Wedding">
+            <span class="reel__media"><img src="assets/web/posters/m-and-b.webp" width="540" height="960" loading="lazy" decoding="async" alt="Ring bearer in a suit holding a briefcase labelled Security" /></span>
+            <span class="reel__title">M &amp; B</span>
+            <span class="reel__meta"><span>Wedding</span><span><span class="visually-hidden">Length </span>1:12</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="love">
+          <a class="reel" href="assets/web/reels/e-and-e.mp4" data-reel="e-and-e" data-title="E &amp; E" data-kind="Wedding">
+            <span class="reel__media"><img src="assets/web/posters/e-and-e.webp" width="540" height="960" loading="lazy" decoding="async" alt="Bride walking up the aisle on her father’s arm under string lights" /></span>
+            <span class="reel__title">E &amp; E</span>
+            <span class="reel__meta"><span>Wedding</span><span><span class="visually-hidden">Length </span>0:53</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="love">
+          <a class="reel" href="assets/web/reels/a-and-t.mp4" data-reel="a-and-t" data-title="A &amp; T" data-kind="Elopement">
+            <span class="reel__media"><img src="assets/web/posters/a-and-t.webp" width="540" height="960" loading="lazy" decoding="async" alt="Groom twirling the bride on a high-rise terrace" /></span>
+            <span class="reel__title">A &amp; T</span>
+            <span class="reel__meta"><span>Elopement</span><span><span class="visually-hidden">Length </span>1:01</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="brand">
+          <a class="reel" href="assets/web/reels/sips-and-stir.mp4" data-reel="sips-and-stir" data-title="Sips &amp; Stir" data-kind="Brand shoot">
+            <span class="reel__media"><img src="assets/web/posters/sips-and-stir.webp" width="540" height="960" loading="lazy" decoding="async" alt="Signature cocktails lined up on a white bar" /></span>
+            <span class="reel__title">Sips &amp; Stir</span>
+            <span class="reel__meta"><span>Brand shoot</span><span><span class="visually-hidden">Length </span>0:18</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="brand">
+          <a class="reel" href="assets/web/reels/nk.mp4" data-reel="nk" data-title="N.K." data-kind="Brand shoot">
+            <span class="reel__media"><img src="assets/web/posters/nk.webp" width="540" height="960" loading="lazy" decoding="async" alt="Two women in matching purple printed outfits" /></span>
+            <span class="reel__title">N.K.</span>
+            <span class="reel__meta"><span>Brand shoot</span><span><span class="visually-hidden">Length </span>0:42</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="event">
+          <a class="reel" href="assets/web/reels/ore.mp4" data-reel="ore" data-title="Ore" data-kind="Event">
+            <span class="reel__media"><img src="assets/web/posters/ore.webp" width="540" height="960" loading="lazy" decoding="async" alt="Guests with name badges smiling at a networking event" /></span>
+            <span class="reel__title">Ore</span>
+            <span class="reel__meta"><span>Event</span><span><span class="visually-hidden">Length </span>1:01</span></span>
+          </a>
+        </li>
+        <li class="reels__item" data-cat="event">
+          <a class="reel" href="assets/web/reels/lr.mp4" data-reel="lr" data-title="L.R." data-kind="Masterclass">
+            <span class="reel__media"><img src="assets/web/posters/lr.webp" width="540" height="960" loading="lazy" decoding="async" alt="Guest testing a lip colour over a makeup workbook" /></span>
+            <span class="reel__title">L.R.</span>
+            <span class="reel__meta"><span>Masterclass</span><span><span class="visually-hidden">Length </span>0:45</span></span>
+          </a>
+        </li>
       </ul>
+      <p class="work__status visually-hidden" aria-live="polite"></p>
+    </section>
 
-      <a href="#contact" class="hidden md:inline-block bg-pink-hot text-white font-body uppercase text-xs tracking-wider px-6 py-2 rounded-full hover:bg-pink-600 transition-colors">Book Now</a>
+    <!-- Kind words: the signature -->
+    <section class="reactions" id="kind-words" aria-labelledby="reactions-title">
+      <h2 class="reactions__title" id="reactions-title">What clients sent back</h2>
+      <ul class="reactions__list">
+        <li class="reaction reaction--xl">
+          <figure>
+            <blockquote class="reaction__quote">
+              <p><span class="reaction__burst">OMGGGGGGGGGG</span> I LOVE IT SOOOOOOO MUCH ITS PERFECT</p>
+            </blockquote>
+            <figcaption class="reaction__by">A client, by text</figcaption>
+          </figure>
+        </li>
+        <li class="reaction reaction--l">
+          <figure>
+            <blockquote class="reaction__quote"><p>Girl you made me cry again!</p></blockquote>
+            <figcaption class="reaction__by">E., October bride <button class="link reaction__watch" type="button" data-open-reel="e-and-e">Watch E &amp; E</button></figcaption>
+          </figure>
+        </li>
+        <li class="reaction reaction--m">
+          <figure>
+            <blockquote class="reaction__quote"><p>Sooooo I’ve been getting text and messages on instagram and Facebook ALL day! Everyone said you captured Friday perfectly and they can’t stop watching.</p></blockquote>
+            <figcaption class="reaction__by">A client, by text</figcaption>
+          </figure>
+        </li>
+        <li class="reaction reaction--l">
+          <figure>
+            <blockquote class="reaction__quote"><p>I keep watching [my] fiancé video over &amp; over it was perfect</p></blockquote>
+            <figcaption class="reaction__by">C., bride <button class="link reaction__watch" type="button" data-open-reel="c-and-r">Watch C &amp; R</button></figcaption>
+          </figure>
+        </li>
+        <li class="reaction reaction--long">
+          <figure>
+            <blockquote class="reaction__quote">
+              <p>ShotByKissu absolutely understood the assignment! From start to finish, she did a phenomenal job capturing the beautiful moments, emotions, and unforgettable memories from our wedding celebration! … What made the experience even better was her incredibly quick turnaround time! We were blown away by how quickly she delivered such beautiful, high-quality content without compromising the quality of her work.</p>
+            </blockquote>
+            <figcaption class="reaction__by">E., bride, in a five-star review</figcaption>
+          </figure>
+        </li>
+        <li class="reaction reaction--m">
+          <figure>
+            <blockquote class="reaction__quote"><p>Your shots were amazing, [R.] said your quality was top tier!!</p></blockquote>
+            <figcaption class="reaction__by">C., bride</figcaption>
+          </figure>
+        </li>
+        <li class="reaction reaction--m">
+          <figure>
+            <blockquote class="reaction__quote"><p>The recap is beautiful and I really appreciate all the additional footage. You did an amazing job!</p></blockquote>
+            <figcaption class="reaction__by">A client, by text</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
 
-      <button id="hamburger" class="md:hidden flex flex-col gap-1.5 z-[60]" aria-label="Menu">
-        <span class="hamburger-line block w-7 h-0.5 bg-white transition-all"></span>
-        <span class="hamburger-line block w-7 h-0.5 bg-white transition-all"></span>
-        <span class="hamburger-line block w-7 h-0.5 bg-white transition-all"></span>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-dark/95 flex-col items-center justify-center gap-8 hidden">
-      <a href="#portfolio" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">Work</a>
-      <a href="#about" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">About</a>
-      <a href="#services" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">Services</a>
-      <a href="#process" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">Process</a>
-      <a href="#contact" class="mobile-link font-display text-3xl text-white hover:text-pink-hot">Contact</a>
-      <a href="#contact" class="mobile-link bg-pink-hot text-white uppercase text-sm tracking-wider px-8 py-3 rounded-full mt-4">Book Now</a>
-      <div class="flex gap-6 mt-6 text-white">
-        <a href="#" aria-label="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 2.2c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.3-.5.2-.9.4-1.3.8s-.6.8-.8 1.3c-.1.4-.3 1-.3 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.3 2.1.2.5.4.9.8 1.3s.8.6 1.3.8c.4.1 1 .3 2.1.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.3.5-.2.9-.4 1.3-.8s.6-.8.8-1.3c.1-.4.3-1 .3-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.3-2.1-.2-.5-.4-.9-.8-1.3s-.8-.6-1.3-.8c-.4-.1-1-.3-2.1-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.7A5.9 5.9 0 1 1 12 18a5.9 5.9 0 0 1 0-11.9zm0 9.8A3.9 3.9 0 1 0 12 10a3.9 3.9 0 0 0 0 7.9zm6.1-10A1.4 1.4 0 1 1 16.7 6a1.4 1.4 0 0 1 1.4 1.4z"/></svg></a>
-        <a href="#" aria-label="TikTok"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.3 6.3a4.5 4.5 0 0 1-3.8-2.1h-3v13.2a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V12a5.8 5.8 0 1 0 4.9 5.7V9.9a7.6 7.6 0 0 0 3.7 1V8a4.5 4.5 0 0 1 0-1.7z"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ====================================================== -->
-  <!-- 3. HERO                                                -->
-  <!-- ====================================================== -->
-  <section id="hero" class="relative h-screen w-full overflow-hidden bg-pink-blush">
-    <div id="hero-video-wrap" class="absolute inset-0">
-      <video
-        id="hero-video"
-        class="absolute inset-0 w-full h-full object-cover"
-        autoplay muted loop playsinline>
-        <source src="assets/video/wedding.mp4" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 bg-black/50"></div>
-    </div>
-
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pb-20 md:pb-0">
-      <!-- Main heading -->
-      <h1 class="font-hero font-extrabold text-white leading-[1.1] tracking-tight text-center mx-auto" style="font-size: clamp(2.8rem, 7.5vw, 108px);" data-aos="fade-up" data-aos-delay="200">
-        Your Story,<br />Through My Lens.
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="font-hero font-normal text-white/70 tracking-[0.15em] mt-8 md:mt-10 max-w-2xl mx-auto leading-relaxed" style="font-size: clamp(14px, 1.5vw, 18px);" data-aos="fade-up" data-aos-delay="350">
-        Luxury content creation for love stories, brands &amp; businesses
-      </p>
-
-      <!-- CTA buttons -->
-      <div class="flex flex-col sm:flex-row gap-5 mt-12 md:mt-14 justify-center items-center" data-aos="fade-up" data-aos-delay="500">
-        <a href="#portfolio" class="bg-pink-hot text-white font-body uppercase text-xs tracking-[0.2em] px-10 py-4 rounded-full hover:bg-pink-600 hover:shadow-lg hover:shadow-pink-hot/30 transition-all duration-300">View My Work</a>
-        <a href="#contact" class="bg-white/10 backdrop-blur-sm border border-white/40 text-white font-body uppercase text-xs tracking-[0.2em] px-10 py-4 rounded-full hover:bg-white hover:text-dark transition-all duration-300">Get In Touch</a>
-      </div>
-    </div>
-
-    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce text-white" aria-label="Scroll down">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
-    </a>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 4. ABOUT                                               -->
-  <!-- ====================================================== -->
-  <section id="about" class="py-24 md:py-32 px-6">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-      <div class="flex justify-center md:justify-end" data-aos="fade-right">
-        <div class="relative w-[340px] h-[340px] md:w-[420px] md:h-[420px] lg:w-[480px] lg:h-[480px] overflow-hidden rounded-full">
-          <img src="assets/img/kissu-portrait.png"
-               alt="Kissu — content creator portrait"
-               class="w-full h-full object-cover" />
-        </div>
-      </div>
-      <div data-aos="fade-left">
-        <h2 class="font-display uppercase text-4xl md:text-5xl lg:text-6xl text-dark mb-8 leading-tight tracking-wide">
-          About<br />Shot By Kissu
-        </h2>
-        <p class="font-body text-warmgray leading-relaxed text-base md:text-lg">
-          Shot By Kissu is a creative content studio dedicated to bringing your vision to life. From cinematic wedding films and stunning brand shoots to dynamic event coverage and scroll-stopping social media content — I blend artistry, professionalism, and personalized attention to make every project unforgettable.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 5. SERVICES                                            -->
-  <!-- ====================================================== -->
-  <section id="services" class="bg-pink-blush/40 py-28 md:py-36 px-6 relative">
-    <div class="absolute top-0 left-0 right-0 h-px bg-pink-soft/60"></div>
-    <div class="absolute bottom-0 left-0 right-0 h-px bg-pink-soft/60"></div>
-
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-20" data-aos="fade-up">
-        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-4">What I Offer</p>
-        <h2 class="font-display uppercase text-4xl md:text-6xl text-dark tracking-[0.08em]">Services</h2>
-        <div class="w-16 h-px bg-dark/30 mx-auto mt-8"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6">
-        <!-- Card 1: Wedding Service -->
-        <div class="service-card group relative px-8 py-12 text-center border border-dark/10 bg-white/50 backdrop-blur-sm transition-all duration-500" data-aos="fade-up" data-aos-delay="0">
-          <svg class="w-10 h-10 mx-auto text-dark/70 mb-6 group-hover:text-pink-hot transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-          <h3 class="font-display text-2xl md:text-3xl text-dark mb-5 tracking-wide">Wedding Service</h3>
-          <div class="w-8 h-px bg-pink-hot/60 mx-auto mb-5"></div>
-          <p class="font-body text-warmgray text-sm leading-loose mb-8 max-w-xs mx-auto">Cinematic highlight reels and full-day coverage — capturing every genuine moment from getting ready to the last dance on the floor.</p>
-          <a href="#contact" class="inline-block font-body uppercase text-[10px] tracking-[0.3em] text-dark border-b border-dark/40 pb-1 hover:text-pink-hot hover:border-pink-hot transition-colors">Learn More</a>
-        </div>
-
-        <!-- Card 2: Brand Shoot -->
-        <div class="service-card group relative px-8 py-12 text-center border border-dark/10 bg-white/50 backdrop-blur-sm transition-all duration-500 md:-translate-y-4" data-aos="fade-up" data-aos-delay="150">
-          <svg class="w-10 h-10 mx-auto text-dark/70 mb-6 group-hover:text-pink-hot transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-          <h3 class="font-display text-2xl md:text-3xl text-dark mb-5 tracking-wide">Brand Shoot</h3>
-          <div class="w-8 h-px bg-pink-hot/60 mx-auto mb-5"></div>
-          <p class="font-body text-warmgray text-sm leading-loose mb-8 max-w-xs mx-auto">Professional photo and video content that brings your brand story to life — product launches, lifestyle shoots, and promotional campaigns.</p>
-          <a href="#contact" class="inline-block font-body uppercase text-[10px] tracking-[0.3em] text-dark border-b border-dark/40 pb-1 hover:text-pink-hot hover:border-pink-hot transition-colors">Learn More</a>
-        </div>
-
-        <!-- Card 3: Events -->
-        <div class="service-card group relative px-8 py-12 text-center border border-dark/10 bg-white/50 backdrop-blur-sm transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
-          <svg class="w-10 h-10 mx-auto text-dark/70 mb-6 group-hover:text-pink-hot transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-          <h3 class="font-display text-2xl md:text-3xl text-dark mb-5 tracking-wide">Event Shoot</h3>
-          <div class="w-8 h-px bg-pink-hot/60 mx-auto mb-5"></div>
-          <p class="font-body text-warmgray text-sm leading-loose mb-8 max-w-xs mx-auto">Corporate events, birthdays, and galas — social-ready photo and video edits that capture the best moments and keep the energy alive long after the night ends.</p>
-          <a href="#contact" class="inline-block font-body uppercase text-[10px] tracking-[0.3em] text-dark border-b border-dark/40 pb-1 hover:text-pink-hot hover:border-pink-hot transition-colors">Learn More</a>
-        </div>
-
-        <!-- Card 4: Social Media Services -->
-        <div class="service-card group relative px-8 py-12 text-center border border-dark/10 bg-white/50 backdrop-blur-sm transition-all duration-500 md:-translate-y-4" data-aos="fade-up" data-aos-delay="450">
-          <svg class="w-10 h-10 mx-auto text-dark/70 mb-6 group-hover:text-pink-hot transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.5-2.5v9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-          <h3 class="font-display text-2xl md:text-3xl text-dark mb-5 tracking-wide">Social Media Services</h3>
-          <div class="w-8 h-px bg-pink-hot/60 mx-auto mb-5"></div>
-          <p class="font-body text-warmgray text-sm leading-loose mb-8 max-w-xs mx-auto">Reels, TikToks, and BTS content — social media packages designed to grow your online presence and keep your audience engaged.</p>
-          <a href="#contact" class="inline-block font-body uppercase text-[10px] tracking-[0.3em] text-dark border-b border-dark/40 pb-1 hover:text-pink-hot hover:border-pink-hot transition-colors">Learn More</a>
-        </div>
-      </div>
-
-      <!-- Editorial CTA -->
-      <div class="text-center mt-24" data-aos="fade-up">
-        <p class="font-display uppercase text-3xl md:text-5xl text-dark tracking-[0.12em] mb-8">Start the Process</p>
-        <a href="#contact" class="inline-block relative px-14 py-4 border-2 border-dark/70 hover:border-pink-hot transition-colors group">
-          <span class="absolute inset-1 border border-dark/30 group-hover:border-pink-hot/60 transition-colors pointer-events-none"></span>
-          <span class="relative font-body uppercase text-xs tracking-[0.4em] text-dark group-hover:text-pink-hot transition-colors">Inquire Here</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 6. PORTFOLIO                                           -->
-  <!-- ====================================================== -->
-  <section id="portfolio" class="py-24 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12" data-aos="fade-up">
-        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">Portfolio</p>
-        <h2 class="font-display text-4xl md:text-5xl text-dark">Recent Work</h2>
-      </div>
-
-      <div class="flex flex-wrap justify-center gap-6 mb-12 font-body uppercase text-sm tracking-wider">
-        <button class="portfolio-filter active text-pink-hot border-b-2 border-pink-hot font-semibold pb-1" data-filter="all">All</button>
-        <button class="portfolio-filter text-warmgray hover:text-pink-hot transition-colors pb-1" data-filter="weddings">Weddings</button>
-        <button class="portfolio-filter text-warmgray hover:text-pink-hot transition-colors pb-1" data-filter="brand">Brand Shoots</button>
-        <button class="portfolio-filter text-warmgray hover:text-pink-hot transition-colors pb-1" data-filter="events">Events</button>
-        <button class="portfolio-filter text-warmgray hover:text-pink-hot transition-colors pb-1" data-filter="social">Social Media</button>
-      </div>
-
-      <div id="portfolio-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[220px]">
-        <a href="https://player.vimeo.com/external/370467553.sd.mp4?s=0aa9c5a67d3a2e6a3e1b4a3b4a3b4a3b4a3b4a3b&profile_id=164" class="glightbox portfolio-item md:col-span-2 md:row-span-2 relative group rounded-xl overflow-hidden cursor-pointer" data-category="weddings" data-gallery="portfolio" data-aos="fade-up">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover" alt="Wedding ceremony" />
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-            <svg class="w-16 h-16 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-display text-white text-xl">Aisha & Marcus</p>
-            <p class="font-body text-white/70 text-xs uppercase tracking-wider mt-1">Watch Film</p>
-          </div>
-        </a>
-
-        <a href="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="weddings" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="First dance" />
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-display text-white text-lg">First Dance</p>
-          </div>
-        </a>
-
-        <a href="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="weddings" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Couple portrait" />
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-display text-white text-lg">Golden Hour</p>
-          </div>
-        </a>
-
-        <a href="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="events" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Event celebration" />
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-display text-white text-lg">Gala Night</p>
-          </div>
-        </a>
-
-        <a href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="events" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Birthday party" />
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-display text-white text-lg">Birthday Bash</p>
-          </div>
-        </a>
-
-        <a href="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="weddings" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Reception" />
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-display text-white text-lg">Reception</p>
-          </div>
-        </a>
-
-        <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="brand" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Brand shoot" />
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-display text-white text-lg">Brand Story</p>
-          </div>
-        </a>
-
-        <a href="https://images.unsplash.com/photo-1525772764200-be829a350797?auto=format&fit=crop&w=1200&q=80" class="glightbox portfolio-item relative group rounded-xl overflow-hidden cursor-pointer" data-category="social" data-gallery="portfolio" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.unsplash.com/photo-1525772764200-be829a350797?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Social reel" />
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-            <svg class="w-12 h-12 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-display text-white text-lg">Social Reel</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="text-center mt-12">
-        <a href="#contact" class="inline-block bg-pink-hot text-white font-body uppercase text-xs tracking-wider px-8 py-3 rounded-full hover:bg-pink-600 transition-colors">View All Work</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 7. PROCESS                                             -->
-  <!-- ====================================================== -->
-  <section id="process" class="py-24 px-6 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-20" data-aos="fade-up">
-        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">How It Works</p>
-        <h2 class="font-display text-4xl md:text-5xl text-dark">The Process</h2>
-      </div>
-
-      <div class="relative flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
-        <div class="hidden md:block absolute top-10 left-[12%] right-[12%] h-0.5 bg-pink-soft"></div>
-
-        <div class="flex-1 text-center relative" data-aos="fade-up" data-aos-delay="0">
-          <span class="font-display text-7xl text-pink-soft/40 absolute -top-8 left-1/2 -translate-x-1/2">01</span>
-          <div class="relative w-20 h-20 mx-auto rounded-full bg-white border-2 border-pink-hot flex items-center justify-center mb-4 z-10">
-            <svg class="w-8 h-8 text-pink-hot" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
-          </div>
-          <h3 class="font-body uppercase text-sm tracking-wider font-semibold text-dark mb-3">Inquire</h3>
-          <p class="font-body text-warmgray text-sm leading-relaxed max-w-xs mx-auto">Fill out the contact form or DM me. Tell me about your vision, date, and vibe.</p>
-        </div>
-
-        <div class="flex-1 text-center relative" data-aos="fade-up" data-aos-delay="150">
-          <span class="font-display text-7xl text-pink-soft/40 absolute -top-8 left-1/2 -translate-x-1/2">02</span>
-          <div class="relative w-20 h-20 mx-auto rounded-full bg-white border-2 border-pink-hot flex items-center justify-center mb-4 z-10">
-            <svg class="w-8 h-8 text-pink-hot" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
-          </div>
-          <h3 class="font-body uppercase text-sm tracking-wider font-semibold text-dark mb-3">Plan</h3>
-          <p class="font-body text-warmgray text-sm leading-relaxed max-w-xs mx-auto">We hop on a call, plan the shot list, scout locations, and lock in the details.</p>
-        </div>
-
-        <div class="flex-1 text-center relative" data-aos="fade-up" data-aos-delay="300">
-          <span class="font-display text-7xl text-pink-soft/40 absolute -top-8 left-1/2 -translate-x-1/2">03</span>
-          <div class="relative w-20 h-20 mx-auto rounded-full bg-white border-2 border-pink-hot flex items-center justify-center mb-4 z-10">
-            <svg class="w-8 h-8 text-pink-hot" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.5-2.5v9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-          </div>
-          <h3 class="font-body uppercase text-sm tracking-wider font-semibold text-dark mb-3">Create</h3>
-          <p class="font-body text-warmgray text-sm leading-relaxed max-w-xs mx-auto">I show up, blend in, and capture every genuine moment — no stiff poses, just real magic.</p>
-        </div>
-
-        <div class="flex-1 text-center relative" data-aos="fade-up" data-aos-delay="450">
-          <span class="font-display text-7xl text-pink-soft/40 absolute -top-8 left-1/2 -translate-x-1/2">04</span>
-          <div class="relative w-20 h-20 mx-auto rounded-full bg-white border-2 border-pink-hot flex items-center justify-center mb-4 z-10">
-            <svg class="w-8 h-8 text-pink-hot" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          </div>
-          <h3 class="font-body uppercase text-sm tracking-wider font-semibold text-dark mb-3">Deliver</h3>
-          <p class="font-body text-warmgray text-sm leading-relaxed max-w-xs mx-auto">Your cinematic film is edited, color-graded, and delivered within 4-6 weeks.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 8. TESTIMONIALS                                        -->
-  <!-- ====================================================== -->
-  <section id="testimonials" class="bg-pink-blush py-24 px-6 overflow-hidden">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">Kind Words</p>
-        <h2 class="font-display text-4xl md:text-5xl text-dark">What Clients Say</h2>
-      </div>
-
-      <div class="swiper testimonials-swiper relative">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="max-w-3xl mx-auto text-center relative px-6">
-              <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-display text-[160px] text-pink-soft/30 pointer-events-none leading-none select-none">"</span>
-              <div class="flex justify-center gap-1 text-pink-hot mb-6 relative z-10">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-              </div>
-              <p class="font-display italic text-xl md:text-2xl text-dark leading-relaxed mb-8 relative z-10">
-                Kissu captured our wedding day better than we could have ever imagined. Every time we rewatch our film, we cry happy tears. She saw moments we didn't even notice were happening.
-              </p>
-              <p class="font-body font-semibold text-dark">Aisha & Marcus</p>
-              <p class="font-body text-warmgray text-sm">Atlanta, GA · June 2025</p>
+    <!-- Services -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <h2 class="heading-l" id="services-title">Services</h2>
+      <ul class="services__list">
+        <li class="service">
+          <h3 class="heading-m service__name">Love stories</h3>
+          <div class="service__body">
+            <p class="lead">Weddings, elopements, proposals, engagements, and everything love.</p>
+            <p>Highlight reels and full-day coverage, capturing every genuine moment from getting ready to the last dance on the floor.</p>
+            <button class="link service__toggle" type="button" aria-expanded="false" aria-controls="remembering">Learn more</button>
+            <div class="remembering" id="remembering" hidden>
+              <p class="remembering__title">The art of remembering</p>
+              <p class="lead">Every love story deserves to be remembered beautifully.</p>
+              <p>The stolen glances. The quiet anticipation. The champagne toasts. The moments that pass in an instant but deserve to live on forever.</p>
+              <a class="btn btn--primary" href="#inquire" data-service="Love story">Inquire <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-
-          <div class="swiper-slide">
-            <div class="max-w-3xl mx-auto text-center relative px-6">
-              <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-display text-[160px] text-pink-soft/30 pointer-events-none leading-none select-none">"</span>
-              <div class="flex justify-center gap-1 text-pink-hot mb-6">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-              </div>
-              <p class="font-display italic text-xl md:text-2xl text-dark leading-relaxed mb-8">
-                Booking Kissu was the best decision we made for our wedding. She's warm, professional, and her editing is on another level. Our families fight over who gets to watch the film next.
-              </p>
-              <p class="font-body font-semibold text-dark">Taylor & Jordan</p>
-              <p class="font-body text-warmgray text-sm">Savannah, GA · September 2025</p>
-            </div>
+        </li>
+        <li class="service">
+          <h3 class="heading-m service__name">Brand shoots</h3>
+          <div class="service__body">
+            <p class="lead">High quality video content that brings your brand’s story and vision to life.</p>
+            <p>Product launches, lifestyle shoots and promotional campaigns.</p>
+            <button class="link" type="button" data-open-reel="sips-and-stir">Watch Sips &amp; Stir</button>
           </div>
-
-          <div class="swiper-slide">
-            <div class="max-w-3xl mx-auto text-center relative px-6">
-              <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-display text-[160px] text-pink-soft/30 pointer-events-none leading-none select-none">"</span>
-              <div class="flex justify-center gap-1 text-pink-hot mb-6">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.95a1 1 0 00.95.69h4.155c.969 0 1.371 1.24.588 1.81l-3.362 2.44a1 1 0 00-.364 1.118l1.287 3.95c.3.922-.755 1.688-1.54 1.118l-3.362-2.44a1 1 0 00-1.176 0l-3.362 2.44c-.784.57-1.84-.196-1.54-1.118l1.287-3.95a1 1 0 00-.364-1.118L2.98 9.377c-.783-.57-.38-1.81.588-1.81h4.155a1 1 0 00.95-.69l1.286-3.95z"/></svg>
-              </div>
-              <p class="font-display italic text-xl md:text-2xl text-dark leading-relaxed mb-8">
-                Kissu made our corporate gala feel like a movie premiere. The highlight reel she delivered got more engagement than anything else we posted that quarter.
-              </p>
-              <p class="font-body font-semibold text-dark">Brianna & DeAndre</p>
-              <p class="font-body text-warmgray text-sm">Atlanta, GA · November 2025</p>
-            </div>
+        </li>
+        <li class="service">
+          <h3 class="heading-m service__name">Events &amp; celebrations</h3>
+          <div class="service__body">
+            <p class="lead">Thoughtful coverage for corporate events, private gatherings, and special occasions.</p>
+            <button class="link" type="button" data-open-reel="ore">Watch Ore</button>
           </div>
-        </div>
-        <div class="swiper-pagination !bottom-0 !relative mt-10"></div>
+        </li>
+        <li class="service">
+          <h3 class="heading-m service__name">Social content</h3>
+          <div class="service__body">
+            <p class="lead">Creative, social-first content designed to elevate your digital presence.</p>
+            <p>Social media packages designed to grow your online presence and keep your audience engaged.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Process -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <h2 class="heading-l" id="process-title">The process</h2>
+      <ol class="steps">
+        <li class="step">
+          <h3 class="heading-m">Inquire</h3>
+          <p>Let’s connect! Reach out through my contact form or send me a DM to get started.</p>
+        </li>
+        <li class="step">
+          <h3 class="heading-m">Plan</h3>
+          <p>We’ll hop on a call to discuss your vision and event details. Once booked, I’ll curate content ideas tailored to your special day.</p>
+        </li>
+        <li class="step">
+          <h3 class="heading-m">Create</h3>
+          <p>You enjoy every moment while I bring our vision to life, capturing all the beautiful details along the way.</p>
+        </li>
+        <li class="step">
+          <h3 class="heading-m">Deliver</h3>
+          <p>Relive the magic! Your content will be delivered within 24–48 hours, ready to cherish and share.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="about__media">
+        <picture>
+          <source type="image/webp" srcset="assets/web/img/kissu-640.webp 640w, assets/web/img/kissu-1100.webp 1100w" sizes="(min-width: 960px) 40vw, 100vw" />
+          <img class="about__portrait" src="assets/web/img/kissu-1100.webp" width="1100" height="1650" loading="lazy" decoding="async" alt="Portrait of Kissu in a grey long-sleeved dress" />
+        </picture>
       </div>
+      <div class="about__letter">
+        <h2 class="heading-l" id="about-title">Meet Kissu</h2>
+        <p class="lead">Hi, I’m Kissu, the creative eye and storyteller behind Shot by Kissu.</p>
+        <p>My creative journey began in 2020, rooted in a love for visual storytelling, meaningful details, and the beauty found in everyday moments. With a background in law and social media management, I bring a unique blend of creativity, intention, and attention to detail to everything I do.</p>
+        <p>In 2026, my passion for storytelling led me into the world of weddings and love stories, where I discovered a new kind of magic.</p>
+        <p>There’s something incredibly special about witnessing love in its most genuine form. The anticipation before a proposal, the excitement of an engagement, the intimacy of an elopement, or the overwhelming joy of a wedding day.</p>
+        <p>For me, it’s never just about creating beautiful content. It’s about preserving moments and bringing stories to life, thoughtfully and authentically.</p>
+        <p>Whether it’s a love story, a brand’s vision, or a milestone worth celebrating, I’d be honored to tell a little piece of your story.</p>
+        <p class="about__sign">With love, <span class="logo-mark logo-mark--sign" role="img" aria-label="Kissu"></span> <span aria-hidden="true">♡</span></p>
+      </div>
+    </section>
+
+    <!-- Inquiry -->
+    <section class="section inquire" id="inquire" aria-labelledby="inquire-title">
+      <div class="inquire__intro">
+        <h2 class="heading-l" id="inquire-title">Tell me about your day</h2>
+        <p class="lead">Fill out the form and I’ll send available packages or a custom quote where applicable.</p>
+        <p>Prefer email? <button class="link copy-email" type="button" data-email="hello@shotbykissu.com">hello@shotbykissu.com</button> <span class="copy-email__status" role="status"></span></p>
+      </div>
+
+      <form class="form" id="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New inquiry from shotbykissu.com" />
+        <p class="form__trap" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></p>
+
+        <div class="field">
+          <label class="field__label" for="f-name">Your name</label>
+          <input class="field__input" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-error" />
+          <p class="field__error" id="f-name-error"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-email">Email</label>
+          <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-error" />
+          <p class="field__error" id="f-email-error"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-phone">Phone <span class="field__optional">(optional)</span></label>
+          <input class="field__input" id="f-phone" name="phone" type="tel" autocomplete="tel" />
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-service">What are we shooting?</label>
+          <select class="field__input" id="f-service" name="service" required aria-describedby="f-service-error">
+            <option value="">Choose one</option>
+            <option>Love story</option>
+            <option>Brand shoot</option>
+            <option>Event or celebration</option>
+            <option>Social content</option>
+            <option>Something else</option>
+          </select>
+          <p class="field__error" id="f-service-error"></p>
+        </div>
+        <div class="field field--half">
+          <label class="field__label" for="f-date">Date</label>
+          <input class="field__input" id="f-date" name="date" type="date" required aria-describedby="f-date-error" />
+          <p class="field__error" id="f-date-error"></p>
+        </div>
+        <div class="field field--half">
+          <label class="field__label" for="f-location">Location <span class="field__optional">(optional)</span></label>
+          <input class="field__input" id="f-location" name="location" type="text" placeholder="City, venue or TBD" />
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-message">Tell me about your vision</label>
+          <textarea class="field__input" id="f-message" name="message" rows="5" required aria-describedby="f-message-error"></textarea>
+          <p class="field__error" id="f-message-error"></p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-referral">How did you find me? <span class="field__optional">(optional)</span></label>
+          <select class="field__input" id="f-referral" name="referral">
+            <option value="">Choose one</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>Google</option>
+            <option>A friend</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form__submit">
+          <button class="btn btn--primary btn--block" type="submit" data-label-idle="Send inquiry" data-label-busy="Sending…" data-label-done="Inquiry sent">Send inquiry</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <h2 class="heading-l" id="faq-title">Questions</h2>
+      <div class="faq__list">
+        <details class="qa" name="faq">
+          <summary class="qa__q">How far in advance should I book?</summary>
+          <div class="qa__a"><p>For weddings, 6–12 months ahead is ideal. For brand shoots and social media projects, 2–4 weeks is usually enough. Events depend on scale, so reach out early to lock in your date.</p></div>
+        </details>
+        <details class="qa" name="faq">
+          <summary class="qa__q">What does pricing look like?</summary>
+          <div class="qa__a"><p>Every project is different! Fill out the form and I’ll send available packages or a custom quote where applicable.</p></div>
+        </details>
+        <details class="qa" name="faq">
+          <summary class="qa__q">How long until I receive my final edit?</summary>
+          <div class="qa__a"><p>All edited videos are delivered within 48 hours after your event.</p></div>
+        </details>
+        <details class="qa" name="faq">
+          <summary class="qa__q">Do you travel outside Atlanta?</summary>
+          <div class="qa__a"><p>Absolutely. I travel, and travel fees are quoted separately depending on location and date.</p></div>
+        </details>
+        <details class="qa" name="faq">
+          <summary class="qa__q">What equipment do you use?</summary>
+          <div class="qa__a"><p>All content is captured on my iPhone 17 Pro Max.</p></div>
+        </details>
+        <details class="qa" name="faq">
+          <summary class="qa__q">Can I request specific songs for my video?</summary>
+          <div class="qa__a"><p>Yes, with a caveat. I use licensed music libraries to stay copyright-compliant on socials. If you have a specific track in mind, I’ll find the closest licensed match or work with you on alternatives.</p></div>
+        </details>
+        <details class="qa" name="faq">
+          <summary class="qa__q">Do you offer raw footage?</summary>
+          <div class="qa__a"><p>Yes, all raw footage is delivered 24 hours after your event.</p></div>
+        </details>
+        <details class="qa" name="faq">
+          <summary class="qa__q">What happens if the weather is bad on shoot day?</summary>
+          <div class="qa__a"><p>Rain makes films gorgeous, honestly. I come prepared with weather covers, backup lighting, and a rain-or-shine attitude.</p></div>
+        </details>
+        <details class="qa" name="faq">
+          <summary class="qa__q">What happens if you’re unable to attend my event?</summary>
+          <div class="qa__a"><p>In the unlikely event that I’m unable to attend, you’ll be notified promptly, and I’ll make every effort to arrange a trusted replacement. If a replacement cannot be secured, a full refund will be issued.</p></div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__brand">
+      <p class="site-footer__logo">Shot by <span class="logo-mark" role="img" aria-label="Kissu"></span></p>
+      <p>Your moments. My vision.</p>
+      <p>Atlanta, GA</p>
     </div>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 9. REELS                                               -->
-  <!-- ====================================================== -->
-  <section id="reels" class="py-24 px-6 text-center">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="font-script text-pink-hot text-4xl md:text-5xl mb-2" data-aos="fade-up">@shotbykissu</h2>
-      <p class="font-body text-warmgray text-sm mb-1" data-aos="fade-up" data-aos-delay="100">Follow along for behind-the-scenes</p>
-      <p class="font-body text-warmgray text-xs mb-12" data-aos="fade-up" data-aos-delay="200">Weddings, brand shoots, events, and social content</p>
-
-      <div class="flex gap-4 justify-center overflow-x-auto md:overflow-visible pb-4 snap-x snap-mandatory md:snap-none scrollbar-hide px-2">
-        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=80" alt="Getting Ready Moments" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <div class="absolute bottom-4 left-3 right-3 text-left">
-            <p class="font-body text-white text-xs font-medium leading-tight">Getting Ready Moments</p>
-            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              24.5K views
-            </p>
-          </div>
-          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
-        </a>
-
-        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=500&q=80" alt="First Look Reaction" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <div class="absolute bottom-4 left-3 right-3 text-left">
-            <p class="font-body text-white text-xs font-medium leading-tight">First Look Reaction</p>
-            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              18.2K views
-            </p>
-          </div>
-          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
-        </a>
-
-        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?auto=format&fit=crop&w=500&q=80" alt="The Vows" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <div class="absolute bottom-4 left-3 right-3 text-left">
-            <p class="font-body text-white text-xs font-medium leading-tight">The Vows That Made Us Cry</p>
-            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              31.7K views
-            </p>
-          </div>
-          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
-        </a>
-
-        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=500&q=80" alt="Reception Dance Off" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <div class="absolute bottom-4 left-3 right-3 text-left">
-            <p class="font-body text-white text-xs font-medium leading-tight">Reception Dance Off</p>
-            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              42.1K views
-            </p>
-          </div>
-          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
-        </a>
-
-        <a href="#" class="reel-card relative flex-shrink-0 w-[200px] md:w-[220px] lg:w-[240px] aspect-[9/16] rounded-2xl overflow-hidden group cursor-pointer snap-center" data-aos="fade-up" data-aos-delay="400">
-          <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=500&q=80" alt="Golden Hour Portraits" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
-          <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-white/80 group-hover:text-white group-hover:scale-110 transition-all" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <div class="absolute bottom-4 left-3 right-3 text-left">
-            <p class="font-body text-white text-xs font-medium leading-tight">Golden Hour Portraits</p>
-            <p class="font-body text-white/70 text-[10px] mt-1 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              15.8K views
-            </p>
-          </div>
-          <div class="absolute inset-0 ring-0 group-hover:ring-2 ring-pink-hot/60 rounded-2xl transition-all"></div>
-        </a>
-      </div>
-
-      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-        <a href="#" class="border-2 border-pink-hot text-pink-hot font-body uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-pink-hot hover:text-white transition-all">Follow on Instagram</a>
-        <a href="#" class="border-2 border-pink-hot text-pink-hot font-body uppercase text-xs tracking-wider px-6 py-3 rounded-full hover:bg-pink-hot hover:text-white transition-all">Watch on TikTok</a>
-      </div>
+    <div class="site-footer__cta">
+      <p class="heading-m">Have a date in mind?</p>
+      <a class="btn btn--primary" href="#inquire">Inquire <span aria-hidden="true">↗</span></a>
     </div>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 10. CTA / BOOKING FORM                                 -->
-  <!-- ====================================================== -->
-  <section id="contact" class="relative py-24 px-6 bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=2000&q=80');">
-    <div class="absolute inset-0 bg-black/70"></div>
-    <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div data-aos="fade-right">
-        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-soft mb-4">Ready to create something beautiful?</p>
-        <h2 class="font-display text-4xl md:text-6xl text-white mb-6 leading-tight">Let's tell your story</h2>
-        <p class="font-body text-white/80 leading-relaxed mb-4">
-          Currently booking for 2026. Whether it's a wedding, brand shoot, event, or social media project — let's make something amazing together.
-        </p>
-        <p class="font-script text-pink-soft text-3xl">xoxo, Kissu</p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-5 md:p-10 shadow-2xl overflow-hidden" data-aos="fade-left">
-        <form id="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
-          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
-          <input type="hidden" name="_subject" value="New Booking Inquiry - SHOTBYKISSU" />
-
-          <div>
-            <label class="font-body text-sm text-dark font-medium mb-1 block">Your Name *</label>
-            <input type="text" name="name" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
-          </div>
-
-          <div>
-            <label class="font-body text-sm text-dark font-medium mb-1 block">Email Address *</label>
-            <input type="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
-          </div>
-
-          <div>
-            <label class="font-body text-sm text-dark font-medium mb-1 block">Phone Number</label>
-            <input type="tel" name="phone" class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="font-body text-sm text-dark font-medium mb-1 block">Event Type *</label>
-              <select name="event_type" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 appearance-none bg-white transition-all">
-                <option value="">Select...</option>
-                <option>Wedding Service</option>
-                <option>Brand Shoot</option>
-                <option>Event</option>
-                <option>Social Media Services</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="font-body text-sm text-dark font-medium mb-1 block">Event Date *</label>
-              <input type="date" name="event_date" required class="w-full max-w-full box-border border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
-            </div>
-          </div>
-
-          <div>
-            <label class="font-body text-sm text-dark font-medium mb-1 block">Event Location</label>
-            <input type="text" name="location" placeholder="City, venue, or TBD" class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 transition-all" />
-          </div>
-
-          <div>
-            <label class="font-body text-sm text-dark font-medium mb-1 block">Tell me about your vision *</label>
-            <textarea name="message" required class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 min-h-[120px] resize-none transition-all"></textarea>
-          </div>
-
-          <div>
-            <label class="font-body text-sm text-dark font-medium mb-1 block">How did you hear about me?</label>
-            <select name="referral" class="w-full border border-gray-200 rounded-lg px-4 py-3 font-body text-sm focus:outline-none focus:border-pink-hot focus:ring-2 focus:ring-pink-hot/20 appearance-none bg-white transition-all">
-              <option value="">Select...</option>
-              <option>Instagram</option>
-              <option>TikTok</option>
-              <option>Google</option>
-              <option>Referral</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <button type="submit" class="w-full bg-pink-hot text-white font-body uppercase text-sm tracking-wider py-4 rounded-full hover:bg-pink-600 transition-colors font-semibold">
-            Let's Create Magic
-          </button>
-        </form>
-
-        <div id="form-success" class="hidden text-center py-12">
-          <svg class="w-16 h-16 mx-auto text-pink-hot mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-          <h3 class="font-display text-2xl text-dark mb-2">Thank you!</h3>
-          <p class="font-body text-warmgray mb-3">I'll be in touch within 24 hours.</p>
-          <p class="font-script text-pink-hot text-xl">xoxo</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 11. FAQ                                                -->
-  <!-- ====================================================== -->
-  <section id="faq" class="py-24 px-6 bg-white">
-    <div class="max-w-3xl mx-auto">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <p class="font-body uppercase text-sm tracking-[0.2em] text-pink-hot mb-3">Got Questions?</p>
-        <h2 class="font-display text-4xl md:text-5xl text-dark">Frequently Asked</h2>
-      </div>
-
-      <div class="space-y-1" id="faq-list">
-        <div class="faq-item border-b border-gray-100">
-          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
-            <span>How far in advance should I book?</span>
-            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
-            <p class="pb-5">For weddings, 6-12 months ahead is ideal. For brand shoots and social media projects, 2-4 weeks is usually enough. Events depend on scale — reach out early to lock in your date.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border-b border-gray-100">
-          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
-            <span>What does your pricing look like?</span>
-            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
-            <p class="pb-5">Every project is different! Wedding packages, brand shoots, events, and social media services are all priced based on scope. Fill out the form and I'll send you a custom quote.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border-b border-gray-100">
-          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
-            <span>How long until I receive my final film?</span>
-            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
-            <p class="pb-5">Highlight reels: 4-6 weeks. Full-length films: 8-10 weeks. You'll also get a 60-second social teaser within a week of your event.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border-b border-gray-100">
-          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
-            <span>Do you travel outside Atlanta?</span>
-            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
-            <p class="pb-5">Absolutely. I travel nationwide and have shot destination weddings in the Caribbean and Europe. Travel fees depend on location and date.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border-b border-gray-100">
-          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
-            <span>What equipment do you use?</span>
-            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
-            <p class="pb-5">Sony FX3 and A7S III cinema bodies, a range of G Master primes, DJI gimbal, Mavic 3 drone (where permitted), and professional lighting and audio. Redundant backups on everything.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border-b border-gray-100">
-          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
-            <span>Can I request specific songs for my video?</span>
-            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
-            <p class="pb-5">Yes — with a caveat. I use licensed music libraries to stay copyright-compliant on socials. If you have a specific track in mind, I'll find the closest licensed match or work with you on alternatives.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border-b border-gray-100">
-          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
-            <span>Do you offer raw footage?</span>
-            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
-            <p class="pb-5">Raw footage is available as an add-on for most packages. It's unedited, ungraded, and chunky (think hundreds of GB), so it's best for couples who want every second.</p>
-          </div>
-        </div>
-
-        <div class="faq-item border-b border-gray-100">
-          <button class="faq-question w-full flex justify-between items-center py-5 font-body font-medium text-dark text-left text-lg hover:text-pink-hot transition-colors">
-            <span>What happens if the weather is bad on shoot day?</span>
-            <span class="faq-toggle text-pink-hot text-2xl transition-transform duration-300">+</span>
-          </button>
-          <div class="faq-answer font-body text-warmgray leading-relaxed overflow-hidden max-h-0 transition-all duration-300">
-            <p class="pb-5">Rain makes films gorgeous, honestly. I come prepared with weather covers, backup lighting, and a rain-or-shine attitude. Some of my favorite shots have been under umbrellas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================== -->
-  <!-- 12. FOOTER                                             -->
-  <!-- ====================================================== -->
-  <footer class="bg-dark text-white py-16 px-6">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div>
-        <div class="flex items-baseline gap-2 mb-4">
-          <span class="font-body uppercase tracking-widest text-sm font-light">SHOT BY</span>
-          <span class="font-script text-pink-hot text-3xl leading-none">Kissu</span>
-        </div>
-        <p class="font-script text-pink-soft text-lg mb-4">Your moments. My vision.</p>
-        <p class="font-body text-sm text-gray-400">hello@shotbykissu.com</p>
-        <p class="font-body text-sm text-gray-400">Atlanta, GA</p>
-      </div>
-
-      <div>
-        <h4 class="font-body uppercase text-xs tracking-widest text-pink-hot mb-4">Quick Links</h4>
-        <ul class="space-y-2">
-          <li><a href="#hero" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">Home</a></li>
-          <li><a href="#about" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">About</a></li>
-          <li><a href="#services" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">Services</a></li>
-          <li><a href="#portfolio" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">Portfolio</a></li>
-          <li><a href="#contact" class="font-body text-sm text-gray-400 hover:text-pink-hot transition-colors">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="font-body uppercase text-xs tracking-widest text-pink-hot mb-4">Follow</h4>
-        <div class="flex gap-4">
-          <a href="#" aria-label="Instagram" class="text-white hover:text-pink-hot transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.4.3 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.4.2-1.1.3-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1s-.8-.9-1-1.5c-.2-.4-.3-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5s.9-.8 1.5-1c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm6.4-8.4a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a>
-          <a href="#" aria-label="TikTok" class="text-white hover:text-pink-hot transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.3 6.3a4.5 4.5 0 0 1-3.8-2.1h-3v13.2a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V12a5.8 5.8 0 1 0 4.9 5.7V9.9a7.6 7.6 0 0 0 3.7 1V8a4.5 4.5 0 0 1 0-1.7z"/></svg></a>
-          <a href="#" aria-label="YouTube" class="text-white hover:text-pink-hot transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2C0 8 0 12 0 12s0 4 .5 5.8a3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 16 24 12 24 12s0-4-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
-          <a href="#" aria-label="Pinterest" class="text-white hover:text-pink-hot transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.42 7.62 11.17-.1-.95-.2-2.4.04-3.44.22-.93 1.4-5.94 1.4-5.94s-.36-.72-.36-1.78c0-1.67.97-2.91 2.17-2.91 1.02 0 1.52.77 1.52 1.69 0 1.03-.66 2.57-1 4-.28 1.2.6 2.18 1.79 2.18 2.14 0 3.8-2.26 3.8-5.52 0-2.89-2.07-4.9-5.04-4.9-3.43 0-5.45 2.57-5.45 5.23 0 1.04.4 2.15.9 2.75.1.12.11.22.08.34l-.33 1.36c-.05.22-.17.27-.4.16-1.5-.7-2.44-2.88-2.44-4.64 0-3.78 2.75-7.25 7.92-7.25 4.16 0 7.39 2.96 7.39 6.93 0 4.14-2.6 7.47-6.22 7.47-1.22 0-2.36-.63-2.75-1.38l-.75 2.85c-.27 1.05-1 2.37-1.49 3.17C9.57 23.81 10.77 24 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="max-w-6xl mx-auto border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-2">
-      <p class="font-body text-xs text-gray-500">© <span id="year">2026</span> SHOTBYKISSU. All rights reserved.</p>
-      <p class="font-script text-pink-hot text-sm">Designed with love in ATL</p>
-    </div>
+    <ul class="site-footer__links">
+      <li><a class="link" href="https://www.instagram.com/shotbykissu">Instagram</a></li>
+      <li><a class="link" href="https://www.tiktok.com/@shotbykissu">TikTok</a></li>
+      <li><button class="link copy-email" type="button" data-email="hello@shotbykissu.com">hello@shotbykissu.com</button> <span class="copy-email__status" role="status"></span></li>
+    </ul>
+    <p class="site-footer__legal">© <span data-year>2026</span> Shot by Kissu</p>
   </footer>
 
-  <!-- ====================================================== -->
-  <!-- SCRIPTS                                                -->
-  <!-- ====================================================== -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/portfolio.js"></script>
-  <script src="js/testimonials.js"></script>
-  <script src="js/faq.js"></script>
-  <script src="js/form.js"></script>
+  <!-- Reel player -->
+  <dialog class="player" aria-labelledby="player-title">
+    <div class="player__frame">
+      <video class="player__video" controls playsinline preload="none"></video>
+    </div>
+    <div class="player__bar">
+      <p class="player__title" id="player-title"></p>
+      <button class="player__close" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
