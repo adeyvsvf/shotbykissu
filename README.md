@@ -15,7 +15,7 @@ Then open http://localhost:8000
 ## Stack
 
 - Plain HTML, CSS and JavaScript. No build step, no frameworks.
-- One typeface: Bricolage Grotesque (Google Fonts, variable).
+- Google Fonts: Poppins (body and interface), Playfair Display (headings and quotes), Dancing Script (the "Kissu" logo).
 - Formspree for the inquiry form.
 
 All colors, type sizes, spacing, radii and motion timings are CSS custom properties at the top of `css/site.css`. The brand hex values there must not change.
