@@ -25,39 +25,20 @@
   requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add('is-ready')));
 
   const heroVideo = $('.hero__video');
-  const pauseBtn = $('.hero__pause');
   let heroPausedByUser = false;
 
   const playHero = () => heroVideo.play().catch(() => {});
-  const setPauseLabel = () => {
-    pauseBtn.textContent = heroVideo.paused ? 'Play video' : 'Pause video';
-  };
 
   if (heroVideo && !reduced()) {
     playHero();
-    pauseBtn.hidden = false;
-  } else if (heroVideo) {
-    pauseBtn.hidden = false;
-    setPauseLabel();
   }
-  heroVideo.addEventListener('play', setPauseLabel);
-  heroVideo.addEventListener('pause', setPauseLabel);
-  pauseBtn.addEventListener('click', () => {
-    if (heroVideo.paused) { heroPausedByUser = false; playHero(); }
-    else { heroPausedByUser = true; heroVideo.pause(); }
-  });
 
-  /* ---------- Header: transparent over the hero, solid after ---------- */
-  if ('IntersectionObserver' in window) {
-    const headerHeight = header.offsetHeight;
-    const heroObserver = new IntersectionObserver(([entry]) => {
-      header.dataset.overHero = String(entry.isIntersecting);
-      // Stop decoding video nobody can see
-      if (!entry.isIntersecting) heroVideo.pause();
-      else if (!heroPausedByUser && !reduced()) playHero();
-    }, { rootMargin: `-${headerHeight}px 0px 0px 0px` });
-    heroObserver.observe(hero);
+  /* ---------- Header: transparent at top, solid once scrolling starts ---------- */
+  function updateHeader() {
+    header.dataset.overHero = String(window.scrollY <= 0);
   }
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
 
   /* ---------- Mobile menu ---------- */
   const menu = $('#menu');
