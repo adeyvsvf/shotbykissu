@@ -232,16 +232,16 @@ a { color: inherit; }
 }
 .site-header__logo {
   display: inline-flex;
-  align-items: baseline;
-  gap: var(--s-1);
+  align-items: center;
   min-height: 44px;
   margin-right: auto;
-  font-size: 0.9375rem;
-  font-weight: 600;
   text-decoration: none;
   transition: opacity var(--dur-small) var(--ease-out);
 }
-.site-header__shot { }
+.logo-mark--header { --w: 8em; }
+.logo-mark--white { display: none; }
+.site-header[data-over-hero="true"] .logo-mark--header:not(.logo-mark--white) { display: none; }
+.site-header[data-over-hero="true"] .logo-mark--white { display: inline-block; }
 
 .site-nav { display: none; }
 .site-nav__list { display: flex; gap: var(--s-6); }
@@ -345,8 +345,6 @@ a { color: inherit; }
     linear-gradient(to top, var(--scrim) 0%, rgba(26, 26, 26, 0.55) 45%, rgba(26, 26, 26, 0.2) 100%);
 }
 .hero__content { display: grid; gap: var(--s-4); max-width: 56rem; text-align: center; justify-items: center; }
-.hero__brand { font-size: 1.125rem; font-weight: 600; }
-.logo-mark--hero { --w: 4.4em; }
 .hero__title {
   font-family: var(--font-display);
   font-size: var(--text-xl);
@@ -676,7 +674,8 @@ a { color: inherit; }
   margin-top: var(--s-3);
   font-weight: 600;
 }
-.logo-mark--sign { --w: 6.5em; }
+.logo-mark--sign { --w: 7em; }
+.logo-mark--footer { --w: 9em; }
 @media (min-width: 960px) {
   .about { grid-template-columns: 5fr 7fr; column-gap: var(--s-9); }
   .about__media { position: sticky; top: calc(var(--header-h) + var(--s-5)); }
@@ -785,7 +784,7 @@ select.field__input {
   color: var(--white);
 }
 .site-footer__brand { display: grid; gap: var(--s-1); color: var(--pink-soft); }
-.site-footer__logo { color: var(--white); font-weight: 600; font-size: 1.125rem; margin-bottom: var(--s-2); }
+.site-footer__logo { margin-bottom: var(--s-2); }
 .site-footer__cta { display: grid; gap: var(--s-4); justify-items: start; }
 .site-footer__links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-6); }
 .site-footer .copy-email__status { color: var(--pink-soft); }
