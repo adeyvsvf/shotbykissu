@@ -118,6 +118,7 @@
     filterBtns.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
     applyFilter(btn.dataset.filter);
   }));
+  applyFilter('love');
 
   /* ---------- Reel player (grows out of the tapped frame) ---------- */
   const player = $('.player');
