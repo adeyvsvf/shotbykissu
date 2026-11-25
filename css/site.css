@@ -29,7 +29,7 @@
   --text-lead: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
   --text-m: clamp(1.5rem, 1.3rem + 0.5vw, 1.5rem);
   --text-l: clamp(2.25rem, 1.8rem + 2vw, 3rem);
-  --text-xl: clamp(3rem, 1.8rem + 5.5vw, 6rem);
+  --text-xl: clamp(2.25rem, 1rem + 5.5vw, 6rem);
 
   /* Space (8-based) */
   --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px; --s-5: 24px;
@@ -354,7 +354,7 @@ a { color: inherit; }
   line-height: 1.08;
   letter-spacing: -0.01em;
 }
-.hero__line { display: block; }
+.hero__line { display: block; white-space: nowrap; }
 .hero__sub { font-family: var(--font-body); font-size: clamp(0.9375rem, 0.85rem + 0.4vw, 1.125rem); font-weight: 300; line-height: 1.7; color: rgba(255, 255, 255, 0.8); letter-spacing: 0.02em; }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--s-4) var(--s-6); margin-top: var(--s-3); }
 
